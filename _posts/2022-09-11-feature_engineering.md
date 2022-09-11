@@ -492,10 +492,10 @@ layout: notebook
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Table above reveals that (Can be generated using <code>describe()</code> method of pandas):</p>
+<p>Table above reveals that (Table can be generated using <code>describe()</code> method of pandas):</p>
 <ul>
-<li>Target variable <code>Survived</code> is binary with means 0.38 which means <b>38%</b> of the people survived. Dataset is <b>not highly</b> imbalanced. In case of highly imbalanced dataset one should use oversampling or downsampling technique.</li>
-<li><code>Pclass</code>, <code>SibSp</code> and <code>Parch</code> have limited values which make sense.</li>
+<li>Target variable <code>Survived</code> is binary with mean 0.38 which means <b>38%</b> of the people survived. Dataset is <b>not highly</b> imbalanced. In case of highly imbalanced dataset one should use oversampling or downsampling technique.</li>
+<li><code>Pclass</code>, <code>SibSp</code> and <code>Parch</code> of descreate nature and have limited values.</li>
 </ul>
 
 </div>
@@ -510,22 +510,94 @@ layout: notebook
 
 <div class="output_area">
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-RangeIndex: 891 entries, 0 to 890
-Data columns (total 6 columns):
- #   Column    Non-Null Count  Dtype  
----  ------    --------------  -----  
- 0   Survived  891 non-null    int64  
- 1   Pclass    891 non-null    int64  
- 2   Age       714 non-null    float64
- 3   SibSp     891 non-null    int64  
- 4   Parch     891 non-null    int64  
- 5   Fare      891 non-null    float64
-dtypes: float64(2), int64(4)
-memory usage: 41.9 KB
-</pre>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Survived</th>
+      <th>Pclass</th>
+      <th>Age</th>
+      <th>SibSp</th>
+      <th>Parch</th>
+      <th>Fare</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Survived</th>
+      <td>1.000000</td>
+      <td>-0.338481</td>
+      <td>-0.077221</td>
+      <td>-0.035322</td>
+      <td>0.081629</td>
+      <td>0.257307</td>
+    </tr>
+    <tr>
+      <th>Pclass</th>
+      <td>-0.338481</td>
+      <td>1.000000</td>
+      <td>-0.369226</td>
+      <td>0.083081</td>
+      <td>0.018443</td>
+      <td>-0.549500</td>
+    </tr>
+    <tr>
+      <th>Age</th>
+      <td>-0.077221</td>
+      <td>-0.369226</td>
+      <td>1.000000</td>
+      <td>-0.308247</td>
+      <td>-0.189119</td>
+      <td>0.096067</td>
+    </tr>
+    <tr>
+      <th>SibSp</th>
+      <td>-0.035322</td>
+      <td>0.083081</td>
+      <td>-0.308247</td>
+      <td>1.000000</td>
+      <td>0.414838</td>
+      <td>0.159651</td>
+    </tr>
+    <tr>
+      <th>Parch</th>
+      <td>0.081629</td>
+      <td>0.018443</td>
+      <td>-0.189119</td>
+      <td>0.414838</td>
+      <td>1.000000</td>
+      <td>0.216225</td>
+    </tr>
+    <tr>
+      <th>Fare</th>
+      <td>0.257307</td>
+      <td>-0.549500</td>
+      <td>0.096067</td>
+      <td>0.159651</td>
+      <td>0.216225</td>
+      <td>1.000000</td>
+    </tr>
+  </tbody>
+</table>
 </div>
+</div>
+
 </div>
 
 </div>
