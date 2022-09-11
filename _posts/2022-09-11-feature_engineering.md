@@ -234,7 +234,7 @@ layout: notebook
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
-<details class="description" open>
+<details class="description">
       <summary class="btn btn-sm" data-open="Hide Code" data-close="Show Code"></summary>
         <p><div class="input">
 
@@ -254,7 +254,7 @@ layout: notebook
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Titanic dataset has 891 entires.
+<pre>Titanic dataset has 891 entries and 6 features.
 </pre>
 </div>
 </div>
