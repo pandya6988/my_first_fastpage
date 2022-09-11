@@ -800,6 +800,131 @@ layout: notebook
 </div>
     {% endraw %}
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>75 percentile of Pclass-1 &gt; 75 percentile of Pclass-2 75 percentile of Pclass-3</p>
+
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<details class="description">
+      <summary class="btn btn-sm" data-open="Hide Code" data-close="Show Code"></summary>
+        <p><div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">describe_count_feature</span><span class="p">(</span><span class="n">feature</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">****** Result for </span><span class="si">{</span><span class="n">feature</span><span class="si">}</span><span class="s2"> ******&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">titanic</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Survived&#39;</span><span class="p">)[</span><span class="n">feature</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span> <span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ttest</span><span class="p">(</span><span class="n">feature</span><span class="p">)</span> <span class="p">)</span>
+    
+<span class="k">def</span> <span class="nf">ttest</span><span class="p">(</span><span class="n">feature</span><span class="p">):</span>
+    <span class="n">survived_feature</span> <span class="o">=</span> <span class="n">titanic</span><span class="p">[</span><span class="n">titanic</span><span class="o">.</span><span class="n">Survived</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span> <span class="p">[</span><span class="n">feature</span><span class="p">]</span>
+    <span class="n">not_survived_feature</span> <span class="o">=</span> <span class="n">titanic</span><span class="p">[</span><span class="n">titanic</span><span class="o">.</span><span class="n">Survived</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span> <span class="p">[</span><span class="n">feature</span><span class="p">]</span>
+    <span class="n">tstat</span><span class="p">,</span> <span class="n">pval</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span><span class="n">survived_feature</span><span class="p">,</span> <span class="n">not_survived_feature</span><span class="p">,</span> <span class="n">equal_var</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;t-statistic: </span><span class="si">{</span><span class="n">tstat</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">, P-Vale: </span><span class="si">{</span><span class="n">pval</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    
+<span class="k">for</span> <span class="n">feature</span> <span class="ow">in</span> <span class="n">titanic</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Survived&#39;</span><span class="p">):</span>
+    <span class="n">describe_count_feature</span><span class="p">(</span><span class="n">feature</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+</p>
+    </details>
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+****** Result for Pclass ******
+          count      mean       std  min  25%  50%  75%  max
+Survived                                                    
+0         549.0  2.531876  0.735805  1.0  2.0  3.0  3.0  3.0
+1         342.0  1.950292  0.863321  1.0  1.0  2.0  3.0  3.0
+t-statistic: -10.3, P-Vale: 0.000
+None
+
+****** Result for Age ******
+          count       mean        std   min   25%   50%   75%   max
+Survived                                                           
+0         424.0  30.626179  14.172110  1.00  21.0  28.0  39.0  74.0
+1         290.0  28.343690  14.950952  0.42  19.0  28.0  36.0  80.0
+t-statistic: nan, P-Vale: nan
+None
+
+****** Result for SibSp ******
+          count      mean       std  min  25%  50%  75%  max
+Survived                                                    
+0         549.0  0.553734  1.288399  0.0  0.0  0.0  1.0  8.0
+1         342.0  0.473684  0.708688  0.0  0.0  0.0  1.0  4.0
+t-statistic: -1.2, P-Vale: 0.233
+None
+
+****** Result for Parch ******
+          count      mean       std  min  25%  50%  75%  max
+Survived                                                    
+0         549.0  0.329690  0.823166  0.0  0.0  0.0  0.0  6.0
+1         342.0  0.464912  0.771712  0.0  0.0  0.0  1.0  5.0
+t-statistic: 2.5, P-Vale: 0.013
+None
+
+****** Result for Fare ******
+          count       mean        std  min      25%   50%   75%       max
+Survived                                                                 
+0         549.0  22.117887  31.388207  0.0   7.8542  10.5  26.0  263.0000
+1         342.0  48.395408  66.596998  0.0  12.4750  26.0  57.0  512.3292
+t-statistic: 6.8, P-Vale: 0.000
+None
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">titanic</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Survived&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Index([&#39;Pclass&#39;, &#39;Age&#39;, &#39;SibSp&#39;, &#39;Parch&#39;, &#39;Fare&#39;], dtype=&#39;object&#39;)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
 </div>
  
 
