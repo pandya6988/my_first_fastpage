@@ -287,7 +287,7 @@ layout: notebook
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
-<details class="description" open>
+<details class="description">
       <summary class="btn btn-sm" data-open="Hide Code" data-close="Show Code"></summary>
         <p><div class="input">
 
@@ -644,7 +644,7 @@ layout: notebook
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
-<details class="description" open>
+<details class="description">
       <summary class="btn btn-sm" data-open="Hide Code" data-close="Show Code"></summary>
         <p><div class="input">
 
