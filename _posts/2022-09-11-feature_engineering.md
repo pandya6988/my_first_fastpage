@@ -881,6 +881,13 @@ Survived
 </div>
     {% endraw %}
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Interestigly, <b>result for `Fare`</b> shows that average ticket cost of the survived passangers is higher than the passangers who did not surived.</p>
+
+</div>
+</div>
+</div>
 </div>
  
 
