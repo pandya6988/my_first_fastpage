@@ -551,6 +551,7 @@ layout: notebook
 <ul>
 <li>Target variable <code>Survived</code> is binary with mean 0.38 which means <b>38%</b> of the people survived. Dataset is <b>not highly</b> imbalanced. In case of highly imbalanced dataset one should use oversampling or downsampling technique.</li>
 <li><code>Pclass</code>, <code>SibSp</code> and <code>Parch</code> of descreate nature and have limited values.</li>
+<li>Titanic dataset has 819 entries but for <code>age</code> it shows only 714 entries. It means <code>Age</code> feature has <b> 177 missing values </b>. </li>
 </ul>
 
 </div>
