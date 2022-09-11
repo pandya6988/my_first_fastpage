@@ -2,7 +2,7 @@
   
     
         "post0": {
-            "title": "Title",
+            "title": "Feature engineering",
             "content": "import pandas as pd .",
             "url": "https://pandya6988.github.io/my_first_fastpage/2022/09/11/feature_engineering.html",
             "relUrl": "/2022/09/11/feature_engineering.html",
