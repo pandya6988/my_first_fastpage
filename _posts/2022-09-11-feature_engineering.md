@@ -4,7 +4,7 @@ title: Feature engineering
 toc: true
 branch: master
 badges: true
-comments: true
+comments: false
 author: Kirtikumar Pandya
 categories: [fastpages, jupyter]
 nb_path: _notebooks/2022-09-11-feature_engineering.ipynb
