@@ -683,7 +683,7 @@ layout: notebook
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The target varible <code>Survived</code> have positive correlation with feature <code>Fare</code>. Passengers who bought costly ticket has higher chace of survival.</p>
+<p>The target varible <code>Survived</code> has positive correlation with feature <code>Fare</code>. Passengers who bought costly ticket has higher chace of survival.</p>
 <p><code>Fare</code> and <code>Pclass</code> have negative correlation.</p>
 
 </div>
