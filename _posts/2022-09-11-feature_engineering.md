@@ -684,11 +684,121 @@ layout: notebook
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The target varible <code>Survived</code> has positive correlation with feature <code>Fare</code>. Passengers who bought costly ticket has higher chace of survival.</p>
-<p><code>Fare</code> and <code>Pclass</code> have negative correlation.</p>
+<p><code>Fare</code> and <code>Pclass</code> have negative correlation. It means ticket class 1 is the costliest and 3 is the cheapest.</p>
 
 </div>
 </div>
 </div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<details class="description">
+      <summary class="btn btn-sm" data-open="Hide Code" data-close="Show Code"></summary>
+        <p><div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">titanic</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Pclass&#39;</span><span class="p">)[</span><span class="s1">&#39;Fare&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+</p>
+    </details>
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>count</th>
+      <th>mean</th>
+      <th>std</th>
+      <th>min</th>
+      <th>25%</th>
+      <th>50%</th>
+      <th>75%</th>
+      <th>max</th>
+    </tr>
+    <tr>
+      <th>Pclass</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>216.0</td>
+      <td>84.154687</td>
+      <td>78.380373</td>
+      <td>0.0</td>
+      <td>30.92395</td>
+      <td>60.2875</td>
+      <td>93.5</td>
+      <td>512.3292</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>184.0</td>
+      <td>20.662183</td>
+      <td>13.417399</td>
+      <td>0.0</td>
+      <td>13.00000</td>
+      <td>14.2500</td>
+      <td>26.0</td>
+      <td>73.5000</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>491.0</td>
+      <td>13.675550</td>
+      <td>11.778142</td>
+      <td>0.0</td>
+      <td>7.75000</td>
+      <td>8.0500</td>
+      <td>15.5</td>
+      <td>69.5500</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
 </div>
  
 
