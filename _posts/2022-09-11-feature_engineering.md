@@ -889,7 +889,7 @@ t-statistic: 6.8, P-Vale: 0.000
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Interestigly, <b>result for Fare</b> shows that average ticket cost of the survived passangers is higher than the passangers who did not surived.</p>
+<p>Interestigly, <b>result for Fare</b> shows that average ticket cost of the survived passangers is higher than the passangers who did not surived. Similar difference can be observed for mean, median and inter quantile ranges.</p>
 
 </div>
 </div>
@@ -897,7 +897,7 @@ t-statistic: 6.8, P-Vale: 0.000
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Average age of the survived passenger ➡️ 30.63 years <br>
-Average age of the non-survived passenger ➡️ 28.34 years <br> <br>
+Average age of the non-survived passenger ➡️ 28.34 years <br> 
 However, 50 percentile for survived and not survived is the same.</p>
 
 </div>
