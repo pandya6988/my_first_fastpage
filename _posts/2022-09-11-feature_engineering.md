@@ -28,7 +28,7 @@ layout: notebook
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We will understand this concept using famous titanic dataset.</p>
+<p>We will use famous Titanic dataset.</p>
 
 </div>
 </div>
@@ -165,6 +165,18 @@ layout: notebook
 </div>
     {% endraw %}
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Data-Exploration">Data Exploration<a class="anchor-link" href="#Data-Exploration"> </a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Continuous-features">Continuous features<a class="anchor-link" href="#Continuous-features"> </a></h3>
+</div>
+</div>
+</div>
 </div>
  
 
