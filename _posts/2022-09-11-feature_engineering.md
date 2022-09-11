@@ -494,7 +494,7 @@ layout: notebook
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><code>describe</code> method reveals that:</p>
 <ul>
-<li>Target variable <code>Survived</code> is binary with means <code>0.38</code> which means <b>38%</b> of the people survived. Dataset is <b>not highly</b> imbalanced. In case of highly imbalanced dataset one should use oversampling or downsampling technique.</li>
+<li>Target variable <code>Survived</code> is binary with means 0.38 which means <b>38%</b> of the people survived. Dataset is <b>not highly</b> imbalanced. In case of highly imbalanced dataset one should use oversampling or downsampling technique.</li>
 <li><code>Pclass</code>, <code>SibSp</code> and <code>Parch</code> have limited values which make sense.</li>
 </ul>
 
