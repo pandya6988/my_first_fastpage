@@ -167,6 +167,72 @@ layout: notebook
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<table>
+<thead><tr>
+<th>Variable</th>
+<th>Defination</th>
+<th>Key</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>survival</td>
+<td>Survival</td>
+<td>0 = No, 1 = Yes</td>
+</tr>
+<tr>
+<td>pclass</td>
+<td>Ticket class</td>
+<td>1 = 1st, 2 = 2nd, 3 = 3rd</td>
+</tr>
+<tr>
+<td>sex</td>
+<td>Sex</td>
+<td></td>
+</tr>
+<tr>
+<td>Age</td>
+<td>Age  in years</td>
+<td></td>
+</tr>
+<tr>
+<td>sibsp</td>
+<td># of siblings / spouses aboard the Titanic</td>
+<td></td>
+</tr>
+<tr>
+<td>parch</td>
+<td># of parents / children aboard the Titanic</td>
+<td></td>
+</tr>
+<tr>
+<td>ticket</td>
+<td>Ticket number</td>
+<td></td>
+</tr>
+<tr>
+<td>fare</td>
+<td>Passenger fare</td>
+<td></td>
+</tr>
+<tr>
+<td>cabin</td>
+<td>Cabin number</td>
+<td></td>
+</tr>
+<tr>
+<td>embarked</td>
+<td>Port of Embarkation</td>
+<td>C = Cherbourg, Q = Queenstown, S = Southampton</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Data-Exploration">Data Exploration<a class="anchor-link" href="#Data-Exploration"> </a></h2>
 </div>
 </div>
@@ -304,16 +370,6 @@ layout: notebook
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">titanic</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -436,11 +492,48 @@ layout: notebook
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><code>describe</code> method reveals that</p>
+<p><code>describe</code> method reveals that:</p>
+<ul>
+<li>Target variable <code>Survived</code> is binary with means <code>0.38</code> which means <b>38%</b> of the people survived. Dataset is <b>not highly</b> imbalanced. In case of highly imbalanced dataset one should use oversampling or downsampling technique.</li>
+<li><code>Pclass</code>, <code>SibSp</code> and <code>Parch</code> have limited values which make sense.</li>
+</ul>
 
 </div>
 </div>
 </div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 891 entries, 0 to 890
+Data columns (total 6 columns):
+ #   Column    Non-Null Count  Dtype  
+---  ------    --------------  -----  
+ 0   Survived  891 non-null    int64  
+ 1   Pclass    891 non-null    int64  
+ 2   Age       714 non-null    float64
+ 3   SibSp     891 non-null    int64  
+ 4   Parch     891 non-null    int64  
+ 5   Fare      891 non-null    float64
+dtypes: float64(2), int64(4)
+memory usage: 41.9 KB
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
 </div>
  
 
