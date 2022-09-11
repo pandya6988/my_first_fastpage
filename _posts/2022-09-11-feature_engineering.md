@@ -492,7 +492,7 @@ layout: notebook
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><code>describe</code> method reveals that:</p>
+<p>Table above reveals that (Can be generated using <code>describe()</code> method of pandas):</p>
 <ul>
 <li>Target variable <code>Survived</code> is binary with means 0.38 which means <b>38%</b> of the people survived. Dataset is <b>not highly</b> imbalanced. In case of highly imbalanced dataset one should use oversampling or downsampling technique.</li>
 <li><code>Pclass</code>, <code>SibSp</code> and <code>Parch</code> have limited values which make sense.</li>
