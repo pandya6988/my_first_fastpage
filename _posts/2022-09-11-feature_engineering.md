@@ -398,7 +398,20 @@ layout: notebook
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
+<details class="description">
+      <summary class="btn btn-sm" data-open="Hide Code" data-close="Show Code"></summary>
+        <p><div class="input">
 
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">titanic</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+</p>
+    </details>
 <div class="output_wrapper">
 <div class="output">
 
@@ -520,7 +533,7 @@ layout: notebook
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Table above reveals that (Table can be generated using <code>describe()</code> method of pandas):</p>
+<p>Table above reveals that:</p>
 <ul>
 <li>Target variable <code>Survived</code> is binary with mean 0.38 which means <b>38%</b> of the people survived. Dataset is <b>not highly</b> imbalanced. In case of highly imbalanced dataset one should use oversampling or downsampling technique.</li>
 <li><code>Pclass</code>, <code>SibSp</code> and <code>Parch</code> of descreate nature and have limited values.</li>
@@ -641,26 +654,14 @@ layout: notebook
 </div>
     {% endraw %}
 
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<details class="description">
-      <summary class="btn btn-sm" data-open="Hide Code" data-close="Show Code"></summary>
-        <p><div class="input">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The target varible <code>Survived</code> have positive correlation with feature <code>Fare</code>. Passengers who bought costly ticket has higher chace of survival.</p>
+<p><code>Fare</code> and <code>Pclass</code> have negative correlation.</p>
 
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
 </div>
 </div>
-</p>
-    </details>
 </div>
-    {% endraw %}
-
 </div>
  
 
