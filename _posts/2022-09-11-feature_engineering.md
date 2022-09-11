@@ -14,23 +14,19 @@ layout: notebook
 
 <div class="container" id="notebook-container">
         
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-</pre></div>
-
-    </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Loading-data">Loading data<a class="anchor-link" href="#Loading-data"> </a></h2>
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We will understand this concept using famous titanic dataset.</p>
 
 </div>
-    {% endraw %}
-
+</div>
+</div>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
