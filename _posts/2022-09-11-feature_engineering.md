@@ -1018,6 +1018,19 @@ However, 50 percentile for survived and not survived is the same.</p>
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Next, Let's plot the data for better understanding.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Visualize-continuous-features">Visualize continuous features<a class="anchor-link" href="#Visualize-continuous-features"> </a></h3>
+</div>
+</div>
+</div>
 </div>
  
 
