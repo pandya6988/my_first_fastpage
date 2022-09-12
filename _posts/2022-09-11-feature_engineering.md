@@ -6,7 +6,7 @@ branch: master
 badges: true
 comments: false
 author: Kirtikumar Pandya
-categories: [fastpages, jupyter]
+categories: [fastpages, Feature engineering, Machine learning]
 nb_path: _notebooks/2022-09-11-feature_engineering.ipynb
 layout: notebook
 ---
@@ -920,8 +920,8 @@ However, 50 percentile for survived and not survived is the same.</p>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;True indicates missing value.&quot;</span><span class="p">)</span>
-<span class="n">titanic</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">titanic</span><span class="o">.</span><span class="n">Age</span><span class="o">.</span><span class="n">isnull</span><span class="p">())</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">titanic</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">titanic</span><span class="o">.</span><span class="n">Age</span><span class="o">.</span><span class="n">isnull</span><span class="p">())</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;True indicates missing value.&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -935,74 +935,13 @@ However, 50 percentile for survived and not survived is the same.</p>
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>True indicates missing value.
+<pre>       Survived    Pclass        Age     SibSp     Parch       Fare
+Age                                                                
+False  0.406162  2.236695  29.699118  0.512605  0.431373  34.694514
+True   0.293785  2.598870        NaN  0.564972  0.180791  22.158567
+True indicates missing value.
 </pre>
 </div>
-</div>
-
-<div class="output_area">
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Survived</th>
-      <th>Pclass</th>
-      <th>Age</th>
-      <th>SibSp</th>
-      <th>Parch</th>
-      <th>Fare</th>
-    </tr>
-    <tr>
-      <th>Age</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>False</th>
-      <td>0.406162</td>
-      <td>2.236695</td>
-      <td>29.699118</td>
-      <td>0.512605</td>
-      <td>0.431373</td>
-      <td>34.694514</td>
-    </tr>
-    <tr>
-      <th>True</th>
-      <td>0.293785</td>
-      <td>2.598870</td>
-      <td>NaN</td>
-      <td>0.564972</td>
-      <td>0.180791</td>
-      <td>22.158567</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
 </div>
 
 </div>
