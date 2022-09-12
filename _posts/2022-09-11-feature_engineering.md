@@ -906,7 +906,6 @@ However, 50 percentile for survived and not survived is the same.</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We saw above that <code>Age</code> has 177 missing value. It is important to understand if the age is missing for certain group of people <u> OR</u> it is missing in systematic fasion. This will decide how we will handle the missing value.</p>
-<p><b>True</b> indicates missing value.</p>
 
 </div>
 </div>
