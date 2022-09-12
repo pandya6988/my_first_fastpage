@@ -1013,7 +1013,7 @@ However, 50 percentile for survived and not survived is the same.</p>
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><b> People without age reported are less likely to be survived, fewer parents/children, slightly higher class number and less fare. </b></p>
+<p>People without age reported are less likely to be survived, fewer parents/children, slightly higher class number and less fare.</p>
 
 </div>
 </div>
