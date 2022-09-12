@@ -11,15 +11,15 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
 <meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
-<link rel="canonical" href="https://pandya6988.github.io/my_first_fastpage/fastpages/jupyter/2022/09/11/feature_engineering.html" />
-<meta property="og:url" content="https://pandya6988.github.io/my_first_fastpage/fastpages/jupyter/2022/09/11/feature_engineering.html" />
+<link rel="canonical" href="https://pandya6988.github.io/my_first_fastpage/fastpages/feature%20engineering/machine%20learning/2022/09/11/feature_engineering.html" />
+<meta property="og:url" content="https://pandya6988.github.io/my_first_fastpage/fastpages/feature%20engineering/machine%20learning/2022/09/11/feature_engineering.html" />
 <meta property="og:site_name" content="Kirtikumar Pandya" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2022-09-11T00:00:00-05:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Feature engineering" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Kirtikumar Pandya"},"dateModified":"2022-09-11T00:00:00-05:00","datePublished":"2022-09-11T00:00:00-05:00","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"Feature engineering","mainEntityOfPage":{"@type":"WebPage","@id":"https://pandya6988.github.io/my_first_fastpage/fastpages/jupyter/2022/09/11/feature_engineering.html"},"url":"https://pandya6988.github.io/my_first_fastpage/fastpages/jupyter/2022/09/11/feature_engineering.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Kirtikumar Pandya"},"dateModified":"2022-09-11T00:00:00-05:00","datePublished":"2022-09-11T00:00:00-05:00","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"Feature engineering","mainEntityOfPage":{"@type":"WebPage","@id":"https://pandya6988.github.io/my_first_fastpage/fastpages/feature%20engineering/machine%20learning/2022/09/11/feature_engineering.html"},"url":"https://pandya6988.github.io/my_first_fastpage/fastpages/feature%20engineering/machine%20learning/2022/09/11/feature_engineering.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/my_first_fastpage/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://pandya6988.github.io/my_first_fastpage/feed.xml" title="Kirtikumar Pandya" /><link rel="shortcut icon" type="image/x-icon" href="/my_first_fastpage/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -92,7 +92,10 @@ window.onload = wrap_img;
         <a class="category-tags-link" href="/my_first_fastpage/categories/#fastpages">fastpages</a>
         &nbsp;
       
-        <a class="category-tags-link" href="/my_first_fastpage/categories/#jupyter">jupyter</a>
+        <a class="category-tags-link" href="/my_first_fastpage/categories/#Feature engineering">Feature engineering</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/my_first_fastpage/categories/#Machine learning">Machine learning</a>
         
       
       </p>
@@ -1075,8 +1078,8 @@ However, 50 percentile for survived and not survived is the same.</p>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"True indicates missing value."</span><span class="p">)</span>
-<span class="n">titanic</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">titanic</span><span class="o">.</span><span class="n">Age</span><span class="o">.</span><span class="n">isnull</span><span class="p">())</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">titanic</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">titanic</span><span class="o">.</span><span class="n">Age</span><span class="o">.</span><span class="n">isnull</span><span class="p">())</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"True indicates missing value."</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1090,74 +1093,13 @@ However, 50 percentile for survived and not survived is the same.</p>
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>True indicates missing value.
+<pre>       Survived    Pclass        Age     SibSp     Parch       Fare
+Age                                                                
+False  0.406162  2.236695  29.699118  0.512605  0.431373  34.694514
+True   0.293785  2.598870        NaN  0.564972  0.180791  22.158567
+True indicates missing value.
 </pre>
 </div>
-</div>
-
-<div class="output_area">
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped="">
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Survived</th>
-      <th>Pclass</th>
-      <th>Age</th>
-      <th>SibSp</th>
-      <th>Parch</th>
-      <th>Fare</th>
-    </tr>
-    <tr>
-      <th>Age</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>False</th>
-      <td>0.406162</td>
-      <td>2.236695</td>
-      <td>29.699118</td>
-      <td>0.512605</td>
-      <td>0.431373</td>
-      <td>34.694514</td>
-    </tr>
-    <tr>
-      <th>True</th>
-      <td>0.293785</td>
-      <td>2.598870</td>
-      <td>NaN</td>
-      <td>0.564972</td>
-      <td>0.180791</td>
-      <td>22.158567</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
 </div>
 
 </div>
@@ -1195,7 +1137,7 @@ However, 50 percentile for survived and not survived is the same.</p>
 
 
 
-  </div><a class="u-url" href="/my_first_fastpage/fastpages/jupyter/2022/09/11/feature_engineering.html" hidden></a>
+  </div><a class="u-url" href="/my_first_fastpage/fastpages/feature%20engineering/machine%20learning/2022/09/11/feature_engineering.html" hidden></a>
 </article>
 
       </div>
