@@ -1103,7 +1103,7 @@ True   0.293785  2.598870        NaN  0.564972  0.180791  22.158567
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Figure 2.1 depicts that first class passengers (<code>Pclass</code>=1) are the most likely to survive (around 64% probability) and third class passengers are the least likely to survive. Here, we can see the clear trend.</p>
-<p>Likelihood of first class passenger survive <b>></b> Likelihood of second class passenger survive <b>></b> Likelihood of third class passenger survive</p>
+<p><i>Likelihood of first class passenger survive</i> <b>></b> <i>Likelihood of second class passenger survive</i> <b>></b> <i>Likelihood of third class passenger survive</i></p>
 
 </div>
 </div>
