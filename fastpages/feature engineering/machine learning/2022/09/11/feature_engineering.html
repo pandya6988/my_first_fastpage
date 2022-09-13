@@ -1281,7 +1281,7 @@ True   0.293785  2.598870        NaN  0.564972  0.180791  22.158567
 <p>Figure 2.2 and figure 2.3 shows that as number of family mamber increases the likelyhood of survining is reduced. Both plots almost similar trend therefore we can combine these two feature and reduce redandency. We have combined features <code>SibSp</code> and <code>Parch</code> and added new feature called <code>family_members</code>.</p>
 <p>family members = (number of siblings / spouses aboard the Titanic) + (number of parents / children aboard the Titanic)</p>
 <p>$family\_member = SibSp + Parch$</p>
-<p>We will decide later whether we should use reduced feature (<code>family_members</code>) <u>OR</u> use two separate features</p>
+<p>We will decide later whether we should use reduced feature (<code>family_members</code>) <u>OR</u> use two separate features.</p>
 
 </div>
 </div>
@@ -1298,7 +1298,7 @@ True   0.293785  2.598870        NaN  0.564972  0.180791  22.158567
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">titanic</span><span class="p">[</span><span class="s1">'family_members'</span><span class="p">]</span> <span class="o">=</span> <span class="n">titanic</span><span class="p">[</span><span class="s1">'SibSp'</span><span class="p">]</span> <span class="o">+</span> <span class="n">titanic</span><span class="p">[</span><span class="s1">'Parch'</span><span class="p">]</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">pointplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">'family_members'</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">'Survived'</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">titanic</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Figure 3.1: Total family members (SibSp + Parch)"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Figure 3: Total family members (SibSp + Parch)"</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
@@ -1326,6 +1326,14 @@ True   0.293785  2.598870        NaN  0.564972  0.180791  22.158567
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can observe from figure 3 that probability of surving increase till three <code>family_members</code> and after that we are observing sudden drop in value. It is worth further investigating this plot for better undestanding.</p>
+
+</div>
+</div>
+</div>
 &lt;/div&gt;
  
 
