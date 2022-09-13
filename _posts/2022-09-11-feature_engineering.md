@@ -1041,7 +1041,7 @@ True   0.293785  2.598870        NaN  0.564972  0.180791  22.158567
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The overlaid histogram highlights the  caution you have to take with looking only at averages instead of full distribution.</p>
+<p>The overlaid histogram highlights the  caution you have to take with looking only at averages instead of full distribution. Except first bin of the <i>histogram for Fare </i>, the likelyhood of surviving versus not surviving is very similar.</p>
 
 </div>
 </div>
