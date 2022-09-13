@@ -1021,6 +1021,24 @@ True   0.293785  2.598870        NaN  0.564972  0.180791  22.158567
 </div>
     {% endraw %}
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Previously, by observing averages and 50 percitles, We saw almost no difference between who survived and who did not. The histogram of age distribution above confirms that.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><p> For <code>Fare</code> we saw drastic difference between mean.</p>
+<ul>
+<li>People who survived ➡️ ~48</li>
+<li>people who did not survived ➡️ ~22</li>
+</ul>
+
+</div>
+</div>
+</div>
 </div>
  
 
