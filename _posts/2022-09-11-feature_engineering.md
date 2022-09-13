@@ -1349,7 +1349,7 @@ dtype: int64
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">titanic</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">titanic</span><span class="o">.</span><span class="n">Cabin</span><span class="o">.</span><span class="n">isnull</span><span class="p">())</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;⬆️ True indicates the missing value&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;⬆️ True indicates the missing value.&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1367,7 +1367,7 @@ dtype: int64
 Cabin          
 False  0.666667
 True   0.299854
-⬆️ True indicates the missing value
+⬆️ True indicates the missing value.
 </pre>
 </div>
 </div>
