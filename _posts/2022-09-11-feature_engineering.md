@@ -1030,11 +1030,18 @@ True   0.293785  2.598870        NaN  0.564972  0.180791  22.158567
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><p> For <code>Fare</code> we saw drastic difference between mean.</p>
+<p><p> For <code>Fare</code> we saw drastic difference between means:</p>
 <ul>
-<li>People who survived ➡️ ~48</li>
-<li>people who did not survived ➡️ ~22</li>
+<li>Mean for people who survived ➡️ ~48</li>
+<li>Mean people who did not survived ➡️ ~22</li>
 </ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The overlaid histogram highlights the  caution you have to take with looking only at averages instead of full distribution.</p>
 
 </div>
 </div>
