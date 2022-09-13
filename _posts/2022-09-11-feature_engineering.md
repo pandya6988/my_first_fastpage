@@ -1109,7 +1109,10 @@ True   0.293785  2.598870        NaN  0.564972  0.180791  22.158567
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Figure 2.2 and figure 2.3 shows that as number of family mamber increases the likelyhood of survining is reduced. Both plots almost similar trend therefore we can combine these two feature and reduce redandency.</p>
+<p>Figure 2.2 and figure 2.3 shows that as number of family mamber increases the likelyhood of survining is reduced. Both plots almost similar trend therefore we can combine these two feature and reduce redandency. We have combined features <code>SibSp</code> and <code>Parch</code> and added new feature called <code>family_members</code>.</p>
+<p>family members = (number of siblings / spouses aboard the Titanic) + (number of parents / children aboard the Titanic)</p>
+<p>$family\_member = SibSp + Parch$</p>
+<p>We will decide later whether we should use reduced feature (<code>family_members</code>) <u>OR</u> use two separate features</p>
 
 </div>
 </div>
