@@ -1159,7 +1159,7 @@ True   0.293785  2.598870        NaN  0.564972  0.180791  22.158567
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We can observe from figure 3 that probability of surving increase till three <code>family_members</code> and after that we are observing sudden drop in value. It is worth further investigating this plot for better undestanding.</p>
+<p>We can observe from figure 3 that the probability of surving increase till three <code>family_members</code> and after that we are observing sudden drop in the values. It is worth further investigating this plot for better undestanding.</p>
 
 </div>
 </div>
