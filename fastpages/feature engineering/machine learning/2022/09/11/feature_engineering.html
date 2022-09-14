@@ -1627,7 +1627,7 @@ dtype: int64
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>For the <code>cabin</code> feature we have 687 NaN values (out of 891 entries).  From 204 available values 147 are unique. At first glace this feature does not look useful for the prediction. Let's further investigate this feature for better understanding.</p>
+<p>For the <code>Cabin</code> feature we have 687 NaN values (out of 891 entries).  From 204 available values 147 are unique. At first glace this feature does not look useful for the prediction. Let's further investigate this feature for better understanding.</p>
 
 </div>
 </div>
@@ -1676,6 +1676,22 @@ True   0.299854
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The code cell above reveals that only $\approx$ 30% passengers without Cabin information could servive. What could have happened that actually no cabin was allocated to few passengers and they were sleeping at one place. Here, reason is not important. We can replace this feature with <code>Cabin_info</code> feature which represents that whether the <code>Cabin</code> information is available or not. <code>Cabin_info</code> can be seen as feature with binary value.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Titanic dataset has 681 unique ticket values out of 891 values with 0 NaN value. From this feature we will not get any useful signal and therefore we will drop it. Reader can explore this feature further (small exercise if you are interested).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The last interesting feature is <code>Name</code>. Logically, Name cannot have any influence whether he survived or not. However, if the passenger has special title (like Dr., prof. etc.), it can give him special previlages. It is worth exploring.</p>
 
 </div>
 </div>
