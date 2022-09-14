@@ -1505,8 +1505,9 @@ True   0.299854
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">titanic</span><span class="p">[</span><span class="s1">&#39;Title_raw&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">titanic</span><span class="o">.</span><span class="n">Name</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
-<span class="n">titanic</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="s1">&#39;Survived&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Title_raw&#39;</span><span class="p">,</span> <span class="s1">&#39;Sex&#39;</span><span class="p">],</span> <span class="n">aggfunc</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;count&#39;</span><span class="p">,</span> <span class="s1">&#39;mean&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([(</span> <span class="s1">&#39;mean&#39;</span><span class="p">,</span> <span class="s1">&#39;Survived&#39;</span><span class="p">)],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;5 most common title&quot;</span><span class="p">)</span>
+<span class="n">titanic</span><span class="p">[</span><span class="s1">&#39;Title_raw&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">titanic</span><span class="o">.</span><span class="n">Name</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+<span class="n">titanic</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="s1">&#39;Survived&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Title_raw&#39;</span><span class="p">,</span> <span class="s1">&#39;Sex&#39;</span><span class="p">],</span> <span class="n">aggfunc</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;count&#39;</span><span class="p">,</span> <span class="s1">&#39;mean&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([(</span> <span class="s1">&#39;count&#39;</span><span class="p">,</span> <span class="s1">&#39;Survived&#39;</span><span class="p">)],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)[:</span><span class="mi">5</span><span class="p">]</span>
 </pre></div>
 
     </div>
@@ -1516,6 +1517,14 @@ True   0.299854
     </details>
 <div class="output_wrapper">
 <div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>5 most common title
+</pre>
+</div>
+</div>
 
 <div class="output_area">
 
@@ -1562,52 +1571,10 @@ True   0.299854
   </thead>
   <tbody>
     <tr>
-      <th>the Countess</th>
-      <th>female</th>
-      <td>1</td>
-      <td>1.000000</td>
-    </tr>
-    <tr>
-      <th>Mlle</th>
-      <th>female</th>
-      <td>2</td>
-      <td>1.000000</td>
-    </tr>
-    <tr>
-      <th>Sir</th>
+      <th>Mr</th>
       <th>male</th>
-      <td>1</td>
-      <td>1.000000</td>
-    </tr>
-    <tr>
-      <th>Dr</th>
-      <th>female</th>
-      <td>1</td>
-      <td>1.000000</td>
-    </tr>
-    <tr>
-      <th>Ms</th>
-      <th>female</th>
-      <td>1</td>
-      <td>1.000000</td>
-    </tr>
-    <tr>
-      <th>Lady</th>
-      <th>female</th>
-      <td>1</td>
-      <td>1.000000</td>
-    </tr>
-    <tr>
-      <th>Mme</th>
-      <th>female</th>
-      <td>1</td>
-      <td>1.000000</td>
-    </tr>
-    <tr>
-      <th>Mrs</th>
-      <th>female</th>
-      <td>125</td>
-      <td>0.792000</td>
+      <td>517</td>
+      <td>0.156673</td>
     </tr>
     <tr>
       <th>Miss</th>
@@ -1616,57 +1583,21 @@ True   0.299854
       <td>0.697802</td>
     </tr>
     <tr>
+      <th>Mrs</th>
+      <th>female</th>
+      <td>125</td>
+      <td>0.792000</td>
+    </tr>
+    <tr>
       <th>Master</th>
       <th>male</th>
       <td>40</td>
       <td>0.575000</td>
     </tr>
     <tr>
-      <th>Col</th>
-      <th>male</th>
-      <td>2</td>
-      <td>0.500000</td>
-    </tr>
-    <tr>
-      <th>Major</th>
-      <th>male</th>
-      <td>2</td>
-      <td>0.500000</td>
-    </tr>
-    <tr>
-      <th>Dr</th>
-      <th>male</th>
-      <td>6</td>
-      <td>0.333333</td>
-    </tr>
-    <tr>
-      <th>Mr</th>
-      <th>male</th>
-      <td>517</td>
-      <td>0.156673</td>
-    </tr>
-    <tr>
-      <th>Jonkheer</th>
-      <th>male</th>
-      <td>1</td>
-      <td>0.000000</td>
-    </tr>
-    <tr>
       <th>Rev</th>
       <th>male</th>
       <td>6</td>
-      <td>0.000000</td>
-    </tr>
-    <tr>
-      <th>Don</th>
-      <th>male</th>
-      <td>1</td>
-      <td>0.000000</td>
-    </tr>
-    <tr>
-      <th>Capt</th>
-      <th>male</th>
-      <td>1</td>
       <td>0.000000</td>
     </tr>
   </tbody>
