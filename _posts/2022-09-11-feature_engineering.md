@@ -1350,9 +1350,10 @@ dtype: int64
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">number_of_unique_values</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">feature</span> <span class="ow">in</span> <span class="n">titanic</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Survived&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
-    <span class="n">number_of_unique_values</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">titanic</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()]</span>
+    <span class="n">number_of_unique_values</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span> <span class="o">=</span> <span class="n">titanic</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
 
-<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">number_of_unique_values</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="nb">list</span><span class="p">(</span><span class="n">number_of_unique_values</span><span class="o">.</span><span class="n">keys</span><span class="p">()),</span> <span class="nb">list</span><span class="p">(</span><span class="n">number_of_unique_values</span><span class="o">.</span><span class="n">values</span><span class="p">())])</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">,</span> <span class="s1">&#39;# of unique values&#39;</span><span class="p">])</span>
 </pre></div>
 
     </div>
@@ -1385,20 +1386,34 @@ dtype: int64
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Name</th>
-      <th>Sex</th>
-      <th>Ticket</th>
-      <th>Cabin</th>
-      <th>Embarked</th>
+      <th>features</th>
+      <th># of unique values</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
+      <td>Name</td>
       <td>891</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Sex</td>
       <td>2</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Ticket</td>
       <td>681</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Cabin</td>
       <td>147</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Embarked</td>
       <td>3</td>
     </tr>
   </tbody>
@@ -1416,7 +1431,7 @@ dtype: int64
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>For the <code>cabin</code> feature we have 687 NaN values (out of 891 entries). At first glace this feature does not look useful for the prediction. Let's further investigate this feature for better understanding.</p>
+<p>For the <code>cabin</code> feature we have 687 NaN values (out of 891 entries).  From 204 available values 147 are unique. At first glace this feature does not look useful for the prediction. Let's further investigate this feature for better understanding.</p>
 
 </div>
 </div>
