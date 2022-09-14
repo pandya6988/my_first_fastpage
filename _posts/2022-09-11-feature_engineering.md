@@ -1482,6 +1482,23 @@ True   0.299854
 </div>
 </div>
 </div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">titanic</span><span class="p">[</span><span class="s1">&#39;Cabin_info&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">titanic</span><span class="o">.</span><span class="n">Cabin</span><span class="o">.</span><span class="n">isnull</span><span class="p">(),</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Titanic dataset has 681 unique ticket values out of 891 values with 0 NaN value. From this feature we will not get any useful signal and therefore we will drop it. Reader can explore this feature further (small exercise if you are interested).</p>
@@ -1672,6 +1689,7 @@ True   0.299854
       <th>Embarked</th>
       <th>Title_raw</th>
       <th>Title</th>
+      <th>Cabin_info</th>
     </tr>
   </thead>
   <tbody>
@@ -1685,6 +1703,7 @@ True   0.299854
       <td>S</td>
       <td>Mr</td>
       <td>Mr</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>1</th>
@@ -1696,6 +1715,7 @@ True   0.299854
       <td>C</td>
       <td>Mrs</td>
       <td>Mrs</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>2</th>
@@ -1707,6 +1727,7 @@ True   0.299854
       <td>S</td>
       <td>Miss</td>
       <td>Miss</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>3</th>
@@ -1718,6 +1739,7 @@ True   0.299854
       <td>S</td>
       <td>Mrs</td>
       <td>Mrs</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>4</th>
@@ -1729,9 +1751,11 @@ True   0.299854
       <td>S</td>
       <td>Mr</td>
       <td>Mr</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>...</th>
+      <td>...</td>
       <td>...</td>
       <td>...</td>
       <td>...</td>
@@ -1751,6 +1775,7 @@ True   0.299854
       <td>S</td>
       <td>Rev</td>
       <td>other</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>887</th>
@@ -1762,6 +1787,7 @@ True   0.299854
       <td>S</td>
       <td>Miss</td>
       <td>Miss</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>888</th>
@@ -1773,6 +1799,7 @@ True   0.299854
       <td>S</td>
       <td>Miss</td>
       <td>Miss</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>889</th>
@@ -1784,6 +1811,7 @@ True   0.299854
       <td>C</td>
       <td>Mr</td>
       <td>Mr</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>890</th>
@@ -1795,10 +1823,11 @@ True   0.299854
       <td>Q</td>
       <td>Mr</td>
       <td>Mr</td>
+      <td>0</td>
     </tr>
   </tbody>
 </table>
-<p>891 rows × 8 columns</p>
+<p>891 rows × 9 columns</p>
 </div>
 </div>
 
