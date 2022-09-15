@@ -2097,7 +2097,7 @@ True   0.299854
 <p><b><u>Embarked</u></b></p>
 <p><code>Embarked</code> has only two unknown values. We can replace the missing value with the most frequent value.</p>
 <p><b><u>Cabin</u></b></p>
-<p>In the previous section that only $\approx$ 30% passengers without cabin information could survive. What could have happened that actually no cabin was allocated to few passengers and they were sleeping at one place. Here, reason is not important. We can replace this feature with <code>Cabin_info</code> feature which indicates that whether the <code>Cabin</code> information is available or not. <code>Cabin_info</code> can be seen as a feature with binary values.</p>
+<p>In the previous section  that only $\approx$ 30% passengers without cabin information could survive. What could have happened that actually no cabin was allocated to few passengers and they were sleeping at one place. Here, reason is not important. We can replace this feature with <code>Cabin_info</code> feature which indicates that whether the <code>Cabin</code> information is available or not. <code>Cabin_info</code> can be seen as a feature with binary values.</p>
 
 </div>
 </div>
