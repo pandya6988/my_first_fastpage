@@ -1909,9 +1909,14 @@ True   0.299854
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
 <li><b>Name</b> &nbsp; : Name on its own was not very valuable. Somebody's name probably didn't determine whether they are likely to survive. However, name title can be the proxy for a status and likely is related to whether they survive or not. Therefore, we have decided <code>Title</code> is more useful feature than <code>Name</code>.</li>
-<li><b>Pclass</b> &nbsp; : <i>Likelihood of first class passenger survive</i> <b>></b> <i>Likelihood of second class passenger survive</i> <b>></b> <i>Likelihood of third class passenger survive</i> (<b>as shown in figure 2.1</b>)</li>
-<li><b>Sex</b> &nbsp;: Female has $\approx$ 74% chance of survival and male has only $\approx$ 19% chance of survival (As shown in figure 4.1).</li>
-<li><b>Age</b> &nbsp;: </li>
+<li><b>Pclass</b> &nbsp; : <i>Likelihood of first class passenger survive</i> <b>></b> <i>Likelihood of second class passenger survive</i> <b>></b> <i>Likelihood of third class passenger survive</i> (<b>as shown in figure 2.1</b>). </li>
+<li><b>Sex</b> &nbsp;: Female has $\approx$ 74% chance of survival and male has only $\approx$ 19% chance of survival (<b>as shown in figure 4.1</b>).</li>
+<li><b>Age</b> &nbsp;: As shown in figure 1.1 <code>Age</code> distribution for both cases (survived and not survived) are the same. </li>
+<li><b>SibSp + Parch </b>&nbsp;: We realized that these two features tells the same story and therefore we have decided to combine those into one feature.</li>
+<li><b>Ticket</b> &nbsp;: We validated that ticket number is random and does not provide any important information. </li>
+<li><b>Fare</b> &nbsp;: It is more correlated to <code>Pclass</code>. In future we can investigate if we can use only one of these features to achieve same or better accuracy. </li>
+<li><b>Cabin</b> &nbsp;: Cabin is missing for more than 75% passengers. We could have assumed that it is missing randomly and drop the entire feature. However, we uncovered the fact that the there was a strong correlation whether the cabin was missing and survival rate. Therefore, we converted this categorical feature to binary indicator that seems to be very powerful predictor or whether a pessanger survived. </li>
+<li><b>Embarked</b> &nbsp;: We have concluded that it is not a causal factor. It is likely correlated with some other feature and that other feature is probably the driving factor here. </li>
 </ul>
 
 </div>
