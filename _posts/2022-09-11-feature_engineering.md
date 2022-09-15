@@ -36,6 +36,12 @@ layout: notebook
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Motivation">Motivation<a class="anchor-link" href="#Motivation"> </a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>Feature engineering is the most underrated topic in the machine learning field. Very few books actually concentrate on feature engineering techniques. The success of any machine learning model is dependent on input features.</p>
 <p><b> Garbage In, Garbage Out (GIGO)</b> : The quality of the output is highly dependent on the quality of the input. If you feed the bad features to the model, you will not get high quality output. Even though you have a lot of data and an incredible algorithm but with poorly defined features your model will poorly.</p>
 
