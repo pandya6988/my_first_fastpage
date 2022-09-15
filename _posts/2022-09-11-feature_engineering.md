@@ -1991,6 +1991,108 @@ True   0.299854
 </div>
 </div>
 </div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Null values</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>PassengerId</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>Survived</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>Pclass</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>Name</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>Sex</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>Age</th>
+      <td>177</td>
+    </tr>
+    <tr>
+      <th>SibSp</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>Parch</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>Ticket</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>Fare</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>Cabin</th>
+      <td>687</td>
+    </tr>
+    <tr>
+      <th>Embarked</th>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The table above shows the missing values for each input feature. <code>Age</code> has 177 missing values, Cabin has 687 missing values, and <code>Embarked</code> has only two missing values. It is very important to investigate data to come up with good imputation stratergy.</p>
+<p>In the <i>Feature exploration</i> section we saw that the age distribution for passengers who survived and who did not is the same. Therefore, we will assume that it is missing randomly and replace it with mean value. This is the most naive but useful method. This way, it satisfies the model by making sure we have value in there but by replacing it with average, it is not biasing the model towards one outcome or another.</p>
+
+</div>
+</div>
+</div>
 </div>
  
 
