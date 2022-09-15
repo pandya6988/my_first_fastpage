@@ -22,7 +22,7 @@ layout: notebook
         
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Defination">Defination<a class="anchor-link" href="#Defination"> </a></h2>
+<h2 id="Definition">Definition<a class="anchor-link" href="#Definition"> </a></h2>
 </div>
 </div>
 </div>
