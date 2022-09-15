@@ -36,6 +36,26 @@ layout: notebook
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>Feature engineering is the most under-rated topic in the machine learning field. Very few books actually concetrate on feature engineering techniques. The success of any machine learning model is dependent on input features.</p>
+<p><b> Garbage In, Garbage Out (GIGO)</b> : The quality of the output is highly dependent on quality of the input. If you feed the bad features to the model, you will not get high quality output. Even though you have lot of data and an incredible algorithm but with poorly defined features your model will poorly.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Advantages of feature engineering:</p>
+<ul>
+<li><b>Model flexibility</b>: With nice features, the choice of algorithm and hyperparameter tuning become less important. </li>
+<li><b>Simpler models</b>: with nice features, we don't need super complex algorithm. Even the simpler model can provide better result. These days, complex models are getting more attention, but simpler models are easy to understand, easy to debug, easy to optimize and often run faster than complex models. In the real world, if our model runs a couple of seconds faster, it is a huge win.</li>
+<li><b>Better Result</b>: Garbage in, garbage out. </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Loading-data">Loading data<a class="anchor-link" href="#Loading-data"> </a></h2>
 </div>
 </div>
