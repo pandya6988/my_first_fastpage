@@ -2135,9 +2135,7 @@ True   0.299854
     </div>
 </div>
 </div>
-<details class="description">
-      <summary class="btn btn-sm" data-open="Hide Output" data-close="Show Output"></summary>
-        <p>
+
 <div class="output_wrapper">
 <div class="output">
 
@@ -2236,8 +2234,7 @@ True   0.299854
 
 </div>
 </div>
-</p>
-    </details>
+
 </div>
     {% endraw %}
 
