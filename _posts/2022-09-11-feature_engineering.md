@@ -68,7 +68,7 @@ layout: notebook
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We will use famous Titanic dataset. We will use <code>pandas</code> to read csv file. If your dataset is large and cannot fit to your RAM, it is advisable to use <code>spark</code>.</p>
+<p>We will use famous Titanic dataset. We will use <code>pandas</code> to read csv file.</p>
 
 </div>
 </div>
