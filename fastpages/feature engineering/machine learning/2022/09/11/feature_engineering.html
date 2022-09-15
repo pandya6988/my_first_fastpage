@@ -475,7 +475,7 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>If we drop all categorical variables, it will look like below (Categirocal features are important but for now we will explore continuous features):</p>
+<p>If we drop all categorical variables, it will look like below (Categirocal features are important but for now we will explore continuous features only):</p>
 
 </div>
 </div>
@@ -732,9 +732,9 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Table above reveals that:</p>
+<p>The table above reveals that:</p>
 <ul>
-<li>Target variable <code>Survived</code> is binary with mean 0.38 which means <b>38%</b> of the people survived. Dataset is <b>not highly</b> imbalanced. In case of highly imbalanced dataset one should use oversampling or downsampling technique.</li>
+<li>Target variable <code>Survived</code> is binary with mean 0.38 which means <b>38%</b> of the people survived. The dataset is <b>not highly</b> imbalanced. In the case of highly imbalanced dataset one should use oversampling or downsampling technique.</li>
 <li>
 <code>Pclass</code>, <code>SibSp</code> and <code>Parch</code> of descreate nature and have limited values.</li>
 <li>Titanic dataset has 819 entries but for <code>age</code> it shows only 714 entries. It means <code>Age</code> feature has <b> 177 missing values </b>. </li>
@@ -746,7 +746,7 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Now, let's explore correlation metrics. Keep in mind negative correlation is equally important as positive correlation. The features used to predict target varible should be less correlated with each other because it can confuse the model as it cannot parse out from which feature the signal is comming from.</p>
+<p>Now, let's explore correlation metrics. Keep in mind, negative correlation is equally important as positive correlation. The features used to predict the target variable should be less correlated with each other because it can confuse the model as it cannot parse out from which feature the signal is coming from.</p>
 
 </div>
 </div>
@@ -882,7 +882,7 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The target varible <code>Survived</code> has positive correlation with feature <code>Fare</code>. Passengers who bought costly ticket has higher chace of survival.</p>
+<p>The target variable <code>Survived</code> has positive correlation with the feature <code>Fare</code>. Passengers who bought costly ticket had higher chance of survival.</p>
 <p><code>Fare</code> and <code>Pclass</code> have negative correlation. It means ticket class 1 is the costliest and 3 is the cheapest.</p>
 
 </div>
@@ -1091,7 +1091,7 @@ t-statistic: 6.8, P-Vale: 0.000
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Interestigly, <b>result for Fare</b> shows that average ticket cost of the survived passangers is higher than the passangers who did not surive. Similar difference can be observed for mean, median and inter quantile ranges.</p>
+<p>Interestingly, <b>result for Fare</b> shows that average ticket cost of the survived passengers is higher than the passengers who did not survive. Similar difference can be observed for mean, median and inter quantile ranges.</p>
 
 </div>
 </div>
@@ -1109,7 +1109,7 @@ However, 50 percentile for survived and not survived is the same.</p>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We saw above that <code>Age</code> has 177 missing value. It is important to understand if the age is missing for certain group of people <u> OR</u> it is missing in systematic fasion. This will decide how we will handle the missing value.</p>
+<p>We saw above that <code>Age</code> has 177 missing value. It is important to understand if the age is missing for certain groups of people <u> OR</u> if it is missing in a systematic fashion. This will decide how we will handle the missing value.</p>
 
 </div>
 </div>
@@ -1234,7 +1234,7 @@ True   0.293785  2.598870        NaN  0.564972  0.180791  22.158567
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Previously, by observing averages and 50 percitles of <code>Age</code> feature, We saw almost no difference between who survived and who did not. The histogram of age distribution above confirms that (<b>Figure 1.1</b>).</p>
+<p>In the section above, we observed almost no difference in the age for the group who survived and who did not. The histogram shown in <b>figure 1.1</b> confirms that.</p>
 
 </div>
 </div>
@@ -1242,10 +1242,10 @@ True   0.293785  2.598870        NaN  0.564972  0.180791  22.158567
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p></p>
-<p> For <code>Fare</code> we saw drastic difference between means:</p>
+<p> Previously, we observed that on average, passengers who survived paid a very high price for the ticket as compared to passengers who did not survive.</p>
 <ul>
 <li>Mean <code>Fare</code> for people who survived ➡️ ~48</li>
-<li>Mean <code>Fare</code> people who did not survived ➡️ ~22 </li>
+<li>Mean <code>Fare</code> for people who did not survive ➡️ ~22 </li>
 </ul>
 
 &lt;/div&gt;
@@ -1254,8 +1254,8 @@ True   0.293785  2.598870        NaN  0.564972  0.180791  22.158567
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><u>The overlaid histogram (<b>Figure 1.2</b>) highlights the  caution you have to take with looking only at averages instead of full distribution.</u> Except first bin of the histogram, the likelihood of surviving versus not surviving is very similar. For example in case of the second bin, we can observe $\approx$ 105 for people who did not survivde and $\approx$ 70 for people who survivde.</p>
-<p>The histogram for <code>Fare</code> (<b>Figure 1.2</b>) shows the <b>small</b> difference between two distribution unlike we observed by comparing mean values. The big difference between mean values is impected by some outliers.</p>
+<p><u>The overlaid histogram (Figure 1.2) highlights the caution you have to take by looking only at averages instead of the full distribution.</u> Except the first bin of the histogram, the likelihood of surviving versus not surviving is very similar. For example, in the case of the second bin, we can observe $\approx$ 105 for people who did not survive and $\approx$ 70 for people who survived. </p>
+<p>The histogram for feature <code>Fare</code> (<b>Figure 1.2</b>) shows <b>minor</b> differences between the two distributions, unlike what we observed by comparing mean values. The big difference between mean values is influenced by some outliers.</p>
 
 </div>
 </div>
@@ -1312,7 +1312,7 @@ True   0.293785  2.598870        NaN  0.564972  0.180791  22.158567
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Figure 2.x shows the percentage of people survived at each level of the input feature. The verticle lines represent the confidence level. Input with limited examples will reseult into bigger line and represent less confidence.</p>
+<p>Figure 2.x shows the percentage of people survived at each level of the input feature. The vertical lines represent the confidence level. Input with limited examples will result in a bigger line and represent less confidence.</p>
 
 </div>
 </div>
@@ -1320,7 +1320,7 @@ True   0.293785  2.598870        NaN  0.564972  0.180791  22.158567
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Figure 2.1 depicts that first class passengers (<code>Pclass</code>=1) are the most likely to survive (around 64% probability) and third class passengers are the least likely to survive. Here, we can see the clear trend.</p>
+<p>Figure 2.1 depicts that first class passengers (<code>Pclass</code>=1) are the most likely to survive (around 64% probability) and third class passengers are the least likely to survive. Here, we can see a clear trend.</p>
 <p><i>Likelihood of first class passenger survive</i> <b>&gt;</b> <i>Likelihood of second class passenger survive</i> <b>&gt;</b> <i>Likelihood of third class passenger survive</i></p>
 
 </div>
@@ -1329,10 +1329,10 @@ True   0.293785  2.598870        NaN  0.564972  0.180791  22.158567
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Figure 2.2 and figure 2.3 shows that as number of family mamber increases the likelyhood of survining is reduced. Both plots almost similar trend therefore we can combine these two feature and reduce redandency. We have combined features <code>SibSp</code> and <code>Parch</code> and added new feature called <code>family_members</code>.</p>
+<p>Figure 2.2 and figure 2.3 show that as the number of family members increases, the likelihood of surviving is reduced. Both plots show almost similar trends, therefore we can combine these two features and reduce redundancy. We have combined the features <code>SibSp</code> and <code>Parch</code> and added a new feature called <code>family_members</code>.</p>
 <p>family members = (number of siblings / spouses aboard the Titanic) + (number of parents / children aboard the Titanic)</p>
 <p>$family\_member = SibSp + Parch$</p>
-<p>We will decide later whether we should use reduced feature (<code>family_members</code>) <u>OR</u> use two separate features.</p>
+<p>We will decide later whether we should use the reduced feature (<code>family_members</code>) <u>OR</u> use two separate features.</p>
 
 </div>
 </div>
@@ -1380,7 +1380,7 @@ True   0.293785  2.598870        NaN  0.564972  0.180791  22.158567
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We can observe from figure 3 that the probability of surving increase till three <code>family_members</code> and after that we are observing sudden drop in the values. It is worth further investigating this plot for better undestanding.</p>
+<p>We can observe from figure 3 that the probability of surviving increases till three <code>family_members</code> and after that we are observing sudden drop in the values.</p>
 
 </div>
 </div>
@@ -1397,7 +1397,7 @@ True   0.293785  2.598870        NaN  0.564972  0.180791  22.158567
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Now, Let's explore the categorical fatures and drop continuous features and consider categorical features.</p>
+<p>Now, let's explore the categorical features.</p>
 
 </div>
 </div>
@@ -1562,7 +1562,7 @@ dtype: int64
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Now, we will see number of unique value for each categorical feature.</p>
+<p>Now, we will see the number of unique value for each categorical feature.</p>
 
 </div>
 </div>
@@ -1661,7 +1661,7 @@ dtype: int64
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>For the <code>Cabin</code> feature we have 687 NaN values (out of 891 entries).  From 204 available values 147 are unique. At first glace this feature does not look useful for the prediction. Let's further investigate this feature for better understanding.</p>
+<p>For the <code>Cabin</code> feature, we have 687 NaN values (out of 891 entries). Out of 204 available values, 147 are unique. At first glance, this feature does not look useful for the prediction. Let's further investigate this feature for better understanding.</p>
 
 </div>
 </div>
@@ -1709,7 +1709,7 @@ True   0.299854
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The code cell above reveals that only $\approx$ 30% passengers without Cabin information could servive. What could have happened that actually no cabin was allocated to few passengers and they were sleeping at one place. Here, reason is not important. We can replace this feature with <code>Cabin_info</code> feature which represents that whether the <code>Cabin</code> information is available or not. <code>Cabin_info</code> can be seen as feature with binary value.</p>
+<p>The code cell above reveals that only $\approx$ 30% passengers without Cabin information could servive. What could have happened that actually no cabin was allocated to few passengers and they were sleeping at one place. Here, reason is not important. We can replace this feature with <code>Cabin_info</code> feature which indicates that whether the <code>Cabin</code> information is available or not. <code>Cabin_info</code> can be seen as a feature with binary values.</p>
 
 </div>
 </div>
@@ -1734,7 +1734,7 @@ True   0.299854
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Titanic dataset has 681 unique ticket values out of 891 values with 0 NaN value. From this feature we will not get any useful signal and therefore we will drop it. Reader can explore this feature further (small exercise if you are interested).</p>
+<p>The titanic dataset has 681 unique ticket values out of 891 values with 0 NaN value. From this feature we will not get any useful signal and therefore we will drop the <code>Ticket</code> column. Readers can explore this feature further (small exercise if you are interested).</p>
 
 </div>
 </div>
@@ -1742,7 +1742,7 @@ True   0.299854
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Next, Let's investigate the feature <code>Name</code>. Logically, Name cannot have any influence whether he survived or not. However, if the passenger has special title (like Dr., prof. etc.), it can give him special previlages. It is worth exploring.</p>
+<p>Next, let's investigate the feature <code>Name</code>. Logically, name cannot have any influence whether he survived or not. However, if the passenger has a special title (like Master, prof. etc.), it can give him special privileges. It is worth exploring.</p>
 
 </div>
 </div>
@@ -1869,7 +1869,7 @@ True   0.299854
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The pivot table above reveals that the name with title "Mrs" has $\approx$ 80% chance of survival, name with title "Miss" has $\approx$ 70% of chance of survival. We will keep the 4 most common titles and group the others (please refer feature <code>Title</code> in the dataframe below).</p>
+<p>The pivot table above reveals that a name with the title "Mrs" has $\approx$ 80% chance of survival, name with the title "Miss" has $\approx$ 70% of chance of survival. We will keep the 4 most common titles and group the others (please refer to feature <code>Title</code> in the dataframe below).</p>
 
 </div>
 </div>
@@ -2057,7 +2057,7 @@ True   0.299854
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Likelihood of survival cannot be dependent on embarkation port. Passengers from one port can be richer than other ports and therefore they can afford titcket with cabin (Pivot table below confirms our hypothesis). However, we are considering <code>Cabin_info</code> saperatly and therefore we can ignore <code>Embarked</code> feature. We will drop feature shown in figure 4.3.</p>
+<p>The likelihood of survival cannot be dependent on the embarkation port. Passengers from one port can be richer than other ports and, therefore, they can afford a ticket with cabin (Pivot table below confirms our hypothesis). However, we are considering <code>Cabin_info</code> separately, and therefore we can ignore the <code>Embarked</code> feature. We will drop the feature shown in figure 4.3.</p>
 
 </div>
 </div>
@@ -2156,7 +2156,7 @@ True   0.299854
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
 <li>
-<b>Name</b>   : Name on its own was not very valuable. Somebody's name probably didn't determine whether they are likely to survive. However, name title can be the proxy for a status and likely is related to whether they survive or not. Therefore, we have decided <code>Title</code> is more useful feature than <code>Name</code>.</li>
+<b>Name</b>   : Name on its own was not very valuable. Somebody's name probably didn't determine whether they are likely to survive. However, name title can be the proxy for a status and is likely related to whether they survive or not. Therefore, we have decided <code>Title</code> is more useful feature than <code>Name</code>.</li>
 <li>
 <b>Pclass</b>   : <i>Likelihood of first class passenger survive</i> <b>&gt;</b> <i>Likelihood of second class passenger survive</i> <b>&gt;</b> <i>Likelihood of third class passenger survive</i> (<b>as shown in figure 2.1</b>). </li>
 <li>
@@ -2168,9 +2168,9 @@ True   0.299854
 <li>
 <b>Ticket</b>  : We validated that ticket number is random and does not provide any important information. </li>
 <li>
-<b>Fare</b>  : It is more correlated to <code>Pclass</code>. In future we can investigate if we can use only one of these features to achieve same or better accuracy. </li>
+<b>Fare</b>  : It is more correlated to <code>Pclass</code>. In the future we can investigate if we can use only one of these features to achieve the same or better accuracy. </li>
 <li>
-<b>Cabin</b>  : Cabin is missing for more than 75% passengers. We could have assumed that it is missing randomly and drop the entire feature. However, we uncovered the fact that the there was a strong correlation whether the cabin was missing and survival rate. Therefore, we converted this categorical feature to binary indicator that seems to be very powerful predictor or whether a pessanger survived. </li>
+<b>Cabin</b>  : Cabin is missing for more than 75% of passengers. We could have assumed that it was missing randomly and dropped the entire feature. However, we uncovered the fact that there was a strong correlation between the cabin being missing and the survival rate. Therefore, we converted this categorical feature to a binary indicator that seems to be very powerful predictor of whether a passenger survived. </li>
 <li>
 <b>Embarked</b>  : We have concluded that it is not a causal factor. It is likely correlated with some other feature and that other feature is probably the driving factor here. </li>
 </ul>
