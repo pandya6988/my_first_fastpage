@@ -3352,7 +3352,7 @@ Outliers for Age_clean
     <span class="n">label_encoder</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span>
     <span class="n">titanic</span><span class="p">[</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">feature</span><span class="si">}</span><span class="s2">_numeric"</span><span class="p">]</span> <span class="o">=</span> <span class="n">label_encoder</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">titanic</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">))</span>
     
-<span class="n">titanic</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="n">titanic</span><span class="p">[[</span><span class="s1">'Sex'</span><span class="p">,</span> <span class="s1">'Embarked_clean'</span><span class="p">,</span> <span class="s1">'Ttile_clean'</span><span class="p">,</span> <span class="s1">'Sex_numeric'</span><span class="p">,</span> <span class="s1">'Embarked_clean_numeric'</span><span class="p">,</span> <span class="s1">'Ttile_clean_numeric'</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -3385,24 +3385,9 @@ Outliers for Age_clean
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>PassengerId</th>
-      <th>Survived</th>
-      <th>Pclass</th>
-      <th>Name</th>
       <th>Sex</th>
-      <th>Age</th>
-      <th>SibSp</th>
-      <th>Parch</th>
-      <th>Ticket</th>
-      <th>Fare</th>
-      <th>...</th>
       <th>Embarked_clean</th>
-      <th>Cabin_info</th>
-      <th>Fare_clean</th>
-      <th>Fare_clean_tr</th>
-      <th>Title</th>
       <th>Ttile_clean</th>
-      <th>family_members</th>
       <th>Sex_numeric</th>
       <th>Embarked_clean_numeric</th>
       <th>Ttile_clean_numeric</th>
@@ -3411,127 +3396,51 @@ Outliers for Age_clean
   <tbody>
     <tr>
       <th>0</th>
-      <td>1</td>
-      <td>0</td>
-      <td>3</td>
-      <td>Braund, Mr. Owen Harris</td>
       <td>male</td>
-      <td>22.0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>A/5 21171</td>
-      <td>7.2500</td>
-      <td>...</td>
       <td>S</td>
-      <td>0</td>
-      <td>7.2500</td>
-      <td>1.486167</td>
       <td>Mr</td>
-      <td>Mr</td>
-      <td>1</td>
       <td>1</td>
       <td>2</td>
       <td>2</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>2</td>
-      <td>1</td>
-      <td>1</td>
-      <td>Cumings, Mrs. John Bradley (Florence Briggs Th...</td>
       <td>female</td>
-      <td>38.0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>PC 17599</td>
-      <td>71.2833</td>
-      <td>...</td>
       <td>C</td>
-      <td>1</td>
-      <td>71.2833</td>
-      <td>2.347457</td>
       <td>Mrs</td>
-      <td>Mrs</td>
-      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>3</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>3</td>
-      <td>1</td>
-      <td>3</td>
-      <td>Heikkinen, Miss. Laina</td>
       <td>female</td>
-      <td>26.0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>STON/O2. 3101282</td>
-      <td>7.9250</td>
-      <td>...</td>
       <td>S</td>
-      <td>0</td>
-      <td>7.9250</td>
-      <td>1.512864</td>
       <td>Miss</td>
-      <td>Miss</td>
-      <td>0</td>
       <td>0</td>
       <td>2</td>
       <td>1</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>4</td>
-      <td>1</td>
-      <td>1</td>
-      <td>Futrelle, Mrs. Jacques Heath (Lily May Peel)</td>
       <td>female</td>
-      <td>35.0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>113803</td>
-      <td>53.1000</td>
-      <td>...</td>
       <td>S</td>
-      <td>1</td>
-      <td>53.1000</td>
-      <td>2.213191</td>
       <td>Mrs</td>
-      <td>Mrs</td>
-      <td>1</td>
       <td>0</td>
       <td>2</td>
       <td>3</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>5</td>
-      <td>0</td>
-      <td>3</td>
-      <td>Allen, Mr. William Henry</td>
       <td>male</td>
-      <td>35.0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>373450</td>
-      <td>8.0500</td>
-      <td>...</td>
       <td>S</td>
-      <td>0</td>
-      <td>8.0500</td>
-      <td>1.517606</td>
       <td>Mr</td>
-      <td>Mr</td>
-      <td>0</td>
       <td>1</td>
       <td>2</td>
       <td>2</td>
     </tr>
   </tbody>
 </table>
-<p>5 rows × 23 columns</p>
 </div>
 </div>
 
