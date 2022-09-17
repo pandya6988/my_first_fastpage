@@ -3276,9 +3276,9 @@ Ttile_clean:
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;X_train : </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">titanic</span><span class="p">),</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="si">}</span><span class="s2">% of original dataset.&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;X_val : </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">X_val</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">titanic</span><span class="p">),</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="si">}</span><span class="s2">% of original dataset.&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;X_test : </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">titanic</span><span class="p">),</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="si">}</span><span class="s2">% of original dataset.&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;X_train</span><span class="se">\t</span><span class="s2">: </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">titanic</span><span class="p">),</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="si">}</span><span class="s2">% of original dataset.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;X_val </span><span class="se">\t</span><span class="s2">: </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">X_val</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">titanic</span><span class="p">),</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="si">}</span><span class="s2">% of original dataset.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;X_test </span><span class="se">\t</span><span class="s2">: </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">titanic</span><span class="p">),</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="si">}</span><span class="s2">% of original dataset.&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -3292,9 +3292,9 @@ Ttile_clean:
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>X_train : 60.0% of original dataset.
-X_val : 20.0% of original dataset.
-X_test : 20.0% of original dataset.
+<pre>X_train	: 60.0% of original dataset.
+X_val 	: 20.0% of original dataset.
+X_test 	: 20.0% of original dataset.
 </pre>
 </div>
 </div>
