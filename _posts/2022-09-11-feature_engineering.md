@@ -3064,7 +3064,7 @@ Outliers for Age_clean
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>It is not necessory to convert categorical features to numeric features. It dependes on which algorithm you choose to predict the target feature. For example, if you want to use neural networks, you have to convert those to numeric. On other hand, decision tree or random forest can use the categorical features to predict the target.</p>
+<p>It is not necessary to convert categorical features to numeric features. It depends on which algorithm you choose to predict the target feature. For example, if you want to use neural networks, you have to convert those to numeric. On the other hand, decision tree or random forest can use the categorical features to predict the target.</p>
 
 </div>
 </div>
@@ -3282,6 +3282,12 @@ Outliers for Age_clean
 </div>
     {% endraw %}
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Prepare-features-for-modeling">Prepare features for modeling<a class="anchor-link" href="#Prepare-features-for-modeling"> </a></h2>
+</div>
+</div>
+</div>
 </div>
  
 
