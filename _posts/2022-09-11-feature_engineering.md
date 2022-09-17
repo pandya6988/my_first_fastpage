@@ -3090,6 +3090,9 @@ Outliers for Age_clean
 <span class="k">for</span> <span class="n">feature</span> <span class="ow">in</span> <span class="n">categorical_features</span><span class="p">:</span>
     <span class="n">label_encoder</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span>
     <span class="n">titanic</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">feature</span><span class="si">}</span><span class="s2">_numeric&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">label_encoder</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">titanic</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="si">{</span><span class="n">feature</span><span class="si">}</span><span class="s2">:&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">cl</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">label_encoder</span><span class="o">.</span><span class="n">classes_</span><span class="p">)):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;number </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">  --&gt;  </span><span class="si">{</span><span class="n">cl</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
     
 <span class="n">titanic</span><span class="p">[[</span><span class="s1">&#39;Sex&#39;</span><span class="p">,</span> <span class="s1">&#39;Embarked_clean&#39;</span><span class="p">,</span> <span class="s1">&#39;Ttile_clean&#39;</span><span class="p">,</span> <span class="s1">&#39;Sex_numeric&#39;</span><span class="p">,</span> <span class="s1">&#39;Embarked_clean_numeric&#39;</span><span class="p">,</span> <span class="s1">&#39;Ttile_clean_numeric&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
@@ -3101,6 +3104,29 @@ Outliers for Age_clean
     </details>
 <div class="output_wrapper">
 <div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+Sex:
+number 0  --&gt;  female
+number 1  --&gt;  male
+
+Embarked_clean:
+number 0  --&gt;  C
+number 1  --&gt;  Q
+number 2  --&gt;  S
+
+Ttile_clean:
+number 0  --&gt;  Master
+number 1  --&gt;  Miss
+number 2  --&gt;  Mr
+number 3  --&gt;  Mrs
+number 4  --&gt;  other
+</pre>
+</div>
+</div>
 
 <div class="output_area">
 
