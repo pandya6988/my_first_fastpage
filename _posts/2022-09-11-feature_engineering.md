@@ -2857,7 +2857,7 @@ Outliers for Age_clean
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In <b><u>data exploration</b>&lt;/u&gt; we have discussed the importance of the passenger's title, total family members (SibSp+Parch), and cabin indicator.</p>
+<p>In <b>data exploration</b> we have discussed the importance of the passenger's title, total family members (SibSp+Parch), and cabin indicator.</p>
 
 </div>
 </div>
