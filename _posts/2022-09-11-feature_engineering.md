@@ -3685,7 +3685,7 @@ dtype: int64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ol>
-<li>Run the 5-fold cross-validation and select the best models for evry feature sets discussed above. </li>
+<li>Run the 5-fold cross-validation and select the best models for every feature sets discussed above. This is very important technique, used by many Kaggler. Kaggle grand master Abhishek thakur has written a wonderful book. I highly recommend to read it. </li>
 <li>Evaluate those models on the validation set and pick the best model.</li>
 <li>Evaluate the best model on the test set to guage its ability to generalize to unseen data.</li>
 </ol>
@@ -3964,6 +3964,182 @@ dtype: int64</pre>
 </pre></div>
 
     </div>
+</div>
+</div>
+</p>
+    </details>
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<style>#sk-container-id-1 {color: black;background-color: white;}#sk-container-id-1 pre{padding: 0;}#sk-container-id-1 div.sk-toggleable {background-color: white;}#sk-container-id-1 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-1 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-1 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-1 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-1 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-1 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-1 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-1 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-1 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-1 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-1 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-1 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-1 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-1 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-1 div.sk-item {position: relative;z-index: 1;}#sk-container-id-1 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-1 div.sk-item::before, #sk-container-id-1 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-1 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-1 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-1 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-1 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-1 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-1 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-1 div.sk-label-container {text-align: center;}#sk-container-id-1 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-1 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-1" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>GridSearchCV(cv=5, estimator=RandomForestClassifier(),
+             param_grid={&#x27;max_depth&#x27;: [2, 4, 8, 15, 16, 20, 25, None],
+                         &#x27;n_estimators&#x27;: [2, 4, 8, 16, 32, 64, 128, 256, 512,
+                                          1024, 2048, 4096, 8192, 16384]})</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item sk-dashed-wrapped"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-1" type="checkbox" ><label for="sk-estimator-id-1" class="sk-toggleable__label sk-toggleable__label-arrow">GridSearchCV</label><div class="sk-toggleable__content"><pre>GridSearchCV(cv=5, estimator=RandomForestClassifier(),
+             param_grid={&#x27;max_depth&#x27;: [2, 4, 8, 15, 16, 20, 25, None],
+                         &#x27;n_estimators&#x27;: [2, 4, 8, 16, 32, 64, 128, 256, 512,
+                                          1024, 2048, 4096, 8192, 16384]})</pre></div></div></div><div class="sk-parallel"><div class="sk-parallel-item"><div class="sk-item"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-2" type="checkbox" ><label for="sk-estimator-id-2" class="sk-toggleable__label sk-toggleable__label-arrow">estimator: RandomForestClassifier</label><div class="sk-toggleable__content"><pre>RandomForestClassifier()</pre></div></div></div><div class="sk-serial"><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-3" type="checkbox" ><label for="sk-estimator-id-3" class="sk-toggleable__label sk-toggleable__label-arrow">RandomForestClassifier</label><div class="sk-toggleable__content"><pre>RandomForestClassifier()</pre></div></div></div></div></div></div></div></div></div></div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">print_result</span><span class="p">(</span><span class="n">results</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Best parameters: </span><span class="se">\n</span><span class="si">{</span><span class="n">results</span><span class="o">.</span><span class="n">best_params_</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    
+    <span class="n">means</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">cv_results_</span><span class="p">[</span><span class="s1">&#39;mean_test_score&#39;</span><span class="p">]</span>
+    <span class="n">stds</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">cv_results_</span><span class="p">[</span><span class="s1">&#39;std_test_score&#39;</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">mean</span><span class="p">,</span> <span class="n">std</span><span class="p">,</span> <span class="n">params</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">means</span><span class="p">,</span> <span class="n">stds</span><span class="p">,</span> <span class="n">results</span><span class="o">.</span><span class="n">cv_results_</span><span class="p">[</span><span class="s1">&#39;params&#39;</span><span class="p">]):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">mean</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="si">}</span><span class="s2"> (+/-</span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">std</span><span class="o">*</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="si">}</span><span class="s2">) for </span><span class="si">{</span><span class="n">params</span><span class="si">}</span><span class="s2"> &quot;</span><span class="p">)</span>
+        
+<span class="n">print_result</span><span class="p">(</span><span class="n">cv</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+<details class="description">
+      <summary class="btn btn-sm" data-open="Hide Output" data-close="Show Output"></summary>
+        <p>
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Best parameters: 
+{&#39;max_depth&#39;: 15, &#39;n_estimators&#39;: 16}
+0.742 (+/-0.114) for {&#39;max_depth&#39;: 2, &#39;n_estimators&#39;: 2} 
+0.74 (+/-0.073) for {&#39;max_depth&#39;: 2, &#39;n_estimators&#39;: 4} 
+0.717 (+/-0.1) for {&#39;max_depth&#39;: 2, &#39;n_estimators&#39;: 8} 
+0.747 (+/-0.062) for {&#39;max_depth&#39;: 2, &#39;n_estimators&#39;: 16} 
+0.764 (+/-0.095) for {&#39;max_depth&#39;: 2, &#39;n_estimators&#39;: 32} 
+0.755 (+/-0.11) for {&#39;max_depth&#39;: 2, &#39;n_estimators&#39;: 64} 
+0.751 (+/-0.075) for {&#39;max_depth&#39;: 2, &#39;n_estimators&#39;: 128} 
+0.757 (+/-0.07) for {&#39;max_depth&#39;: 2, &#39;n_estimators&#39;: 256} 
+0.744 (+/-0.094) for {&#39;max_depth&#39;: 2, &#39;n_estimators&#39;: 512} 
+0.749 (+/-0.104) for {&#39;max_depth&#39;: 2, &#39;n_estimators&#39;: 1024} 
+0.751 (+/-0.1) for {&#39;max_depth&#39;: 2, &#39;n_estimators&#39;: 2048} 
+0.742 (+/-0.099) for {&#39;max_depth&#39;: 2, &#39;n_estimators&#39;: 4096} 
+0.749 (+/-0.099) for {&#39;max_depth&#39;: 2, &#39;n_estimators&#39;: 8192} 
+0.749 (+/-0.108) for {&#39;max_depth&#39;: 2, &#39;n_estimators&#39;: 16384} 
+0.743 (+/-0.122) for {&#39;max_depth&#39;: 4, &#39;n_estimators&#39;: 2} 
+0.772 (+/-0.036) for {&#39;max_depth&#39;: 4, &#39;n_estimators&#39;: 4} 
+0.766 (+/-0.08) for {&#39;max_depth&#39;: 4, &#39;n_estimators&#39;: 8} 
+0.768 (+/-0.109) for {&#39;max_depth&#39;: 4, &#39;n_estimators&#39;: 16} 
+0.766 (+/-0.079) for {&#39;max_depth&#39;: 4, &#39;n_estimators&#39;: 32} 
+0.766 (+/-0.071) for {&#39;max_depth&#39;: 4, &#39;n_estimators&#39;: 64} 
+0.764 (+/-0.078) for {&#39;max_depth&#39;: 4, &#39;n_estimators&#39;: 128} 
+0.783 (+/-0.087) for {&#39;max_depth&#39;: 4, &#39;n_estimators&#39;: 256} 
+0.79 (+/-0.07) for {&#39;max_depth&#39;: 4, &#39;n_estimators&#39;: 512} 
+0.783 (+/-0.086) for {&#39;max_depth&#39;: 4, &#39;n_estimators&#39;: 1024} 
+0.783 (+/-0.072) for {&#39;max_depth&#39;: 4, &#39;n_estimators&#39;: 2048} 
+0.79 (+/-0.067) for {&#39;max_depth&#39;: 4, &#39;n_estimators&#39;: 4096} 
+0.79 (+/-0.061) for {&#39;max_depth&#39;: 4, &#39;n_estimators&#39;: 8192} 
+0.79 (+/-0.067) for {&#39;max_depth&#39;: 4, &#39;n_estimators&#39;: 16384} 
+0.729 (+/-0.03) for {&#39;max_depth&#39;: 8, &#39;n_estimators&#39;: 2} 
+0.751 (+/-0.063) for {&#39;max_depth&#39;: 8, &#39;n_estimators&#39;: 4} 
+0.772 (+/-0.031) for {&#39;max_depth&#39;: 8, &#39;n_estimators&#39;: 8} 
+0.788 (+/-0.071) for {&#39;max_depth&#39;: 8, &#39;n_estimators&#39;: 16} 
+0.783 (+/-0.062) for {&#39;max_depth&#39;: 8, &#39;n_estimators&#39;: 32} 
+0.79 (+/-0.067) for {&#39;max_depth&#39;: 8, &#39;n_estimators&#39;: 64} 
+0.792 (+/-0.052) for {&#39;max_depth&#39;: 8, &#39;n_estimators&#39;: 128} 
+0.788 (+/-0.056) for {&#39;max_depth&#39;: 8, &#39;n_estimators&#39;: 256} 
+0.792 (+/-0.061) for {&#39;max_depth&#39;: 8, &#39;n_estimators&#39;: 512} 
+0.794 (+/-0.07) for {&#39;max_depth&#39;: 8, &#39;n_estimators&#39;: 1024} 
+0.796 (+/-0.063) for {&#39;max_depth&#39;: 8, &#39;n_estimators&#39;: 2048} 
+0.796 (+/-0.063) for {&#39;max_depth&#39;: 8, &#39;n_estimators&#39;: 4096} 
+0.796 (+/-0.063) for {&#39;max_depth&#39;: 8, &#39;n_estimators&#39;: 8192} 
+0.794 (+/-0.061) for {&#39;max_depth&#39;: 8, &#39;n_estimators&#39;: 16384} 
+0.738 (+/-0.064) for {&#39;max_depth&#39;: 15, &#39;n_estimators&#39;: 2} 
+0.74 (+/-0.068) for {&#39;max_depth&#39;: 15, &#39;n_estimators&#39;: 4} 
+0.773 (+/-0.075) for {&#39;max_depth&#39;: 15, &#39;n_estimators&#39;: 8} 
+0.798 (+/-0.039) for {&#39;max_depth&#39;: 15, &#39;n_estimators&#39;: 16} 
+0.77 (+/-0.069) for {&#39;max_depth&#39;: 15, &#39;n_estimators&#39;: 32} 
+0.783 (+/-0.058) for {&#39;max_depth&#39;: 15, &#39;n_estimators&#39;: 64} 
+0.768 (+/-0.081) for {&#39;max_depth&#39;: 15, &#39;n_estimators&#39;: 128} 
+0.775 (+/-0.066) for {&#39;max_depth&#39;: 15, &#39;n_estimators&#39;: 256} 
+0.773 (+/-0.046) for {&#39;max_depth&#39;: 15, &#39;n_estimators&#39;: 512} 
+0.785 (+/-0.07) for {&#39;max_depth&#39;: 15, &#39;n_estimators&#39;: 1024} 
+0.781 (+/-0.053) for {&#39;max_depth&#39;: 15, &#39;n_estimators&#39;: 2048} 
+0.787 (+/-0.059) for {&#39;max_depth&#39;: 15, &#39;n_estimators&#39;: 4096} 
+0.779 (+/-0.072) for {&#39;max_depth&#39;: 15, &#39;n_estimators&#39;: 8192} 
+0.783 (+/-0.074) for {&#39;max_depth&#39;: 15, &#39;n_estimators&#39;: 16384} 
+0.749 (+/-0.03) for {&#39;max_depth&#39;: 16, &#39;n_estimators&#39;: 2} 
+0.772 (+/-0.072) for {&#39;max_depth&#39;: 16, &#39;n_estimators&#39;: 4} 
+0.773 (+/-0.077) for {&#39;max_depth&#39;: 16, &#39;n_estimators&#39;: 8} 
+0.766 (+/-0.031) for {&#39;max_depth&#39;: 16, &#39;n_estimators&#39;: 16} 
+0.777 (+/-0.044) for {&#39;max_depth&#39;: 16, &#39;n_estimators&#39;: 32} 
+0.762 (+/-0.069) for {&#39;max_depth&#39;: 16, &#39;n_estimators&#39;: 64} 
+0.781 (+/-0.084) for {&#39;max_depth&#39;: 16, &#39;n_estimators&#39;: 128} 
+0.785 (+/-0.056) for {&#39;max_depth&#39;: 16, &#39;n_estimators&#39;: 256} 
+0.779 (+/-0.088) for {&#39;max_depth&#39;: 16, &#39;n_estimators&#39;: 512} 
+0.781 (+/-0.063) for {&#39;max_depth&#39;: 16, &#39;n_estimators&#39;: 1024} 
+0.787 (+/-0.068) for {&#39;max_depth&#39;: 16, &#39;n_estimators&#39;: 2048} 
+0.779 (+/-0.069) for {&#39;max_depth&#39;: 16, &#39;n_estimators&#39;: 4096} 
+0.781 (+/-0.072) for {&#39;max_depth&#39;: 16, &#39;n_estimators&#39;: 8192} 
+0.777 (+/-0.076) for {&#39;max_depth&#39;: 16, &#39;n_estimators&#39;: 16384} 
+0.745 (+/-0.051) for {&#39;max_depth&#39;: 20, &#39;n_estimators&#39;: 2} 
+0.775 (+/-0.09) for {&#39;max_depth&#39;: 20, &#39;n_estimators&#39;: 4} 
+0.777 (+/-0.053) for {&#39;max_depth&#39;: 20, &#39;n_estimators&#39;: 8} 
+0.762 (+/-0.073) for {&#39;max_depth&#39;: 20, &#39;n_estimators&#39;: 16} 
+0.787 (+/-0.052) for {&#39;max_depth&#39;: 20, &#39;n_estimators&#39;: 32} 
+0.783 (+/-0.083) for {&#39;max_depth&#39;: 20, &#39;n_estimators&#39;: 64} 
+0.772 (+/-0.053) for {&#39;max_depth&#39;: 20, &#39;n_estimators&#39;: 128} 
+0.787 (+/-0.087) for {&#39;max_depth&#39;: 20, &#39;n_estimators&#39;: 256} 
+0.777 (+/-0.062) for {&#39;max_depth&#39;: 20, &#39;n_estimators&#39;: 512} 
+0.781 (+/-0.065) for {&#39;max_depth&#39;: 20, &#39;n_estimators&#39;: 1024} 
+0.779 (+/-0.07) for {&#39;max_depth&#39;: 20, &#39;n_estimators&#39;: 2048} 
+0.779 (+/-0.07) for {&#39;max_depth&#39;: 20, &#39;n_estimators&#39;: 4096} 
+0.785 (+/-0.065) for {&#39;max_depth&#39;: 20, &#39;n_estimators&#39;: 8192} 
+0.781 (+/-0.071) for {&#39;max_depth&#39;: 20, &#39;n_estimators&#39;: 16384} 
+0.744 (+/-0.053) for {&#39;max_depth&#39;: 25, &#39;n_estimators&#39;: 2} 
+0.77 (+/-0.074) for {&#39;max_depth&#39;: 25, &#39;n_estimators&#39;: 4} 
+0.772 (+/-0.054) for {&#39;max_depth&#39;: 25, &#39;n_estimators&#39;: 8} 
+0.773 (+/-0.063) for {&#39;max_depth&#39;: 25, &#39;n_estimators&#39;: 16} 
+0.781 (+/-0.072) for {&#39;max_depth&#39;: 25, &#39;n_estimators&#39;: 32} 
+0.781 (+/-0.044) for {&#39;max_depth&#39;: 25, &#39;n_estimators&#39;: 64} 
+0.775 (+/-0.056) for {&#39;max_depth&#39;: 25, &#39;n_estimators&#39;: 128} 
+0.777 (+/-0.059) for {&#39;max_depth&#39;: 25, &#39;n_estimators&#39;: 256} 
+0.773 (+/-0.058) for {&#39;max_depth&#39;: 25, &#39;n_estimators&#39;: 512} 
+0.773 (+/-0.066) for {&#39;max_depth&#39;: 25, &#39;n_estimators&#39;: 1024} 
+0.773 (+/-0.066) for {&#39;max_depth&#39;: 25, &#39;n_estimators&#39;: 2048} 
+0.781 (+/-0.063) for {&#39;max_depth&#39;: 25, &#39;n_estimators&#39;: 4096} 
+0.783 (+/-0.054) for {&#39;max_depth&#39;: 25, &#39;n_estimators&#39;: 8192} 
+0.779 (+/-0.06) for {&#39;max_depth&#39;: 25, &#39;n_estimators&#39;: 16384} 
+0.736 (+/-0.039) for {&#39;max_depth&#39;: None, &#39;n_estimators&#39;: 2} 
+0.764 (+/-0.018) for {&#39;max_depth&#39;: None, &#39;n_estimators&#39;: 4} 
+0.77 (+/-0.049) for {&#39;max_depth&#39;: None, &#39;n_estimators&#39;: 8} 
+0.773 (+/-0.054) for {&#39;max_depth&#39;: None, &#39;n_estimators&#39;: 16} 
+0.775 (+/-0.08) for {&#39;max_depth&#39;: None, &#39;n_estimators&#39;: 32} 
+0.779 (+/-0.079) for {&#39;max_depth&#39;: None, &#39;n_estimators&#39;: 64} 
+0.785 (+/-0.045) for {&#39;max_depth&#39;: None, &#39;n_estimators&#39;: 128} 
+0.77 (+/-0.067) for {&#39;max_depth&#39;: None, &#39;n_estimators&#39;: 256} 
+0.783 (+/-0.064) for {&#39;max_depth&#39;: None, &#39;n_estimators&#39;: 512} 
+0.775 (+/-0.056) for {&#39;max_depth&#39;: None, &#39;n_estimators&#39;: 1024} 
+0.775 (+/-0.065) for {&#39;max_depth&#39;: None, &#39;n_estimators&#39;: 2048} 
+0.783 (+/-0.064) for {&#39;max_depth&#39;: None, &#39;n_estimators&#39;: 4096} 
+0.779 (+/-0.06) for {&#39;max_depth&#39;: None, &#39;n_estimators&#39;: 8192} 
+0.779 (+/-0.07) for {&#39;max_depth&#39;: None, &#39;n_estimators&#39;: 16384} 
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 </p>
