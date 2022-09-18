@@ -3563,6 +3563,13 @@ X_test 	: 20.0% of original dataset.
 </div>
     {% endraw %}
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>{% include note.html content='Random forest algorithm does not need stardardized data and therefore we will not use this techniqu' %}</p>
+
+</div>
+</div>
+</div>
 </div>
  
 
