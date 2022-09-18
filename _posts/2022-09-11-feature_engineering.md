@@ -3327,7 +3327,7 @@ X_test 	: 20.0% of original dataset.
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">titanic</span><span class="p">[[</span><span class="s1">&#39;Age&#39;</span><span class="p">,</span> <span class="s1">&#39;Fare&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">titanic</span><span class="p">[[</span><span class="s1">&#39;Age_clean&#39;</span><span class="p">,</span> <span class="s1">&#39;Fare_clean_tr&#39;</span><span class="p">,</span> <span class="s1">&#39;SibSp&#39;</span><span class="p">,</span> <span class="s1">&#39;Parch&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -3360,50 +3360,68 @@ X_test 	: 20.0% of original dataset.
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Age</th>
-      <th>Fare</th>
+      <th>Age_clean</th>
+      <th>Fare_clean_tr</th>
+      <th>SibSp</th>
+      <th>Parch</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>count</th>
-      <td>714.000000</td>
+      <td>891.000000</td>
+      <td>891.000000</td>
+      <td>891.000000</td>
       <td>891.000000</td>
     </tr>
     <tr>
       <th>mean</th>
-      <td>29.699118</td>
-      <td>32.204208</td>
+      <td>29.640195</td>
+      <td>1.802562</td>
+      <td>0.523008</td>
+      <td>0.381594</td>
     </tr>
     <tr>
       <th>std</th>
-      <td>14.526497</td>
-      <td>49.693429</td>
+      <td>12.820616</td>
+      <td>0.434645</td>
+      <td>1.102743</td>
+      <td>0.806057</td>
     </tr>
     <tr>
       <th>min</th>
       <td>0.420000</td>
       <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
     </tr>
     <tr>
       <th>25%</th>
-      <td>20.125000</td>
-      <td>7.910400</td>
+      <td>22.000000</td>
+      <td>1.512306</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
     </tr>
     <tr>
       <th>50%</th>
-      <td>28.000000</td>
-      <td>14.454200</td>
+      <td>29.699118</td>
+      <td>1.706078</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
     </tr>
     <tr>
       <th>75%</th>
-      <td>38.000000</td>
-      <td>31.000000</td>
+      <td>35.000000</td>
+      <td>1.987341</td>
+      <td>1.000000</td>
+      <td>0.000000</td>
     </tr>
     <tr>
       <th>max</th>
-      <td>80.000000</td>
-      <td>512.329200</td>
+      <td>65.000000</td>
+      <td>3.014686</td>
+      <td>8.000000</td>
+      <td>6.000000</td>
     </tr>
   </tbody>
 </table>
@@ -3565,7 +3583,7 @@ X_test 	: 20.0% of original dataset.
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>{% include note.html content='Random forest algorithm does not need stardardized data and therefore we will not use this techniqu' %}</p>
+<p>{% include note.html content='Random forest algorithm does not need stardardized data and therefore we will not use this technique.' %}</p>
 
 </div>
 </div>
