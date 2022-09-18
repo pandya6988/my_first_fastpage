@@ -7,7 +7,7 @@
 # https://learnxinyminutes.com/docs/yaml/
 
 title: Kirtikumar Pandya
-description: An easy to use blogging platform with support for Jupyter Notebooks.
+description: Blog is create using jupyter notebook. You can run this notebook using Google Colab/Deepnote. 
 github_username: pandya6988
 # you can comment the below line out if your repo name is not different than your baseurl
 github_repo: "my_first_fastpage"
