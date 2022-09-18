@@ -4885,6 +4885,53 @@ Reduced features
 </div>
     {% endraw %}
 
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>===================================
+Model comparision for test dataset
+===================================
+Raw features
+	Time taken:  0.07
+	max_depth: 8, n_estimator:128
+	Accuracy: 0.84, Recall: 0.74, precision: 0.82, f1: 0.78
+Raw features with minimum cleaning
+	Time taken:  0.0682
+	max_depth: 8, n_estimator:256
+	Accuracy: 0.84, Recall: 0.74, precision: 0.84, f1: 0.78
+All features
+	Time taken:  0.0484
+	max_depth: 4, n_estimator:128
+	Accuracy: 0.86, Recall: 0.78, precision: 0.84, f1: 0.81
+Reduced features
+	Time taken:  0.0064
+	max_depth: 4, n_estimator:32
+	Accuracy: 0.85, Recall: 0.75, precision: 0.85, f1: 0.8
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The model comarison for <b>validation dataset</b> reveals that the model trained with reduced features has the highest f1 score and also takes lesser time to predict the target. It clearly dominates other models.</p>
+<p>However, for <b>test dataset</b> the model trained with all features provides better result as compare to other models but also takes more time to predict. In this case, I will select the model trained with reduced features as the model performance is very close to the model trained with all features and takes less time to predict.</p>
+
+</div>
+</div>
+</div>
 </div>
  
 
