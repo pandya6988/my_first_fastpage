@@ -3064,14 +3064,14 @@ Outliers for Age_clean
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>It is not necessary to convert categorical features to numeric features. It depends on which algorithm you choose to predict the target feature. For example, if you want to use neural networks, you have to convert those to numeric. On the other hand, decision tree or random forest can use the categorical features to predict the target.</p>
+<p>It is not necessary to convert categorical features to numeric features. It depends on which algorithm you choose to predict the target feature. For example, if you want to use neural networks, you have to convert those to numeric.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>{% include note.html content='We will use random forest model to predict target feature. However, let&#8217;s see how you can convert categorical feature to numeric. ' %}</p>
+<p>{% include note.html content='We will use random forest model to predict target feature. ' %}</p>
 
 </div>
 </div>
