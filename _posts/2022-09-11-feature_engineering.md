@@ -3594,6 +3594,18 @@ X_test 	: 20.0% of original dataset.
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Original features (<code>raw_features</code>)</li>
+<li>Original features with minimum cleaning like feeling missing values (<code>cleaned_original_features</code>)</li>
+<li>Original features with all created features (<code>all_features</code>)</li>
+<li>The most useful features by reducing redundency  (``)</li>
+</ul>
+
+</div>
+</div>
+</div>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
