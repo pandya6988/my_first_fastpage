@@ -3613,50 +3613,6 @@ X_test 	: 20.0% of original dataset.
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">titanic</span><span class="o">.</span><span class="n">Title</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>0      11
-1      12
-2       8
-3      12
-4      11
-       ..
-886    14
-887     8
-888     8
-889    11
-890    11
-Name: Title, Length: 891, dtype: int64</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">raw_features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Pclass&#39;</span><span class="p">,</span> <span class="s1">&#39;Sex_numeric&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">,</span> <span class="s1">&#39;SibSp&#39;</span><span class="p">,</span> <span class="s1">&#39;Parch&#39;</span><span class="p">,</span> <span class="s1">&#39;Fare&#39;</span><span class="p">,</span> <span class="s1">&#39;Cabin_numeric&#39;</span><span class="p">,</span> <span class="s1">&#39;Embarked_numeric&#39;</span><span class="p">]</span>
 
 <span class="n">cleaned_original_features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Pclass&#39;</span><span class="p">,</span> <span class="s1">&#39;Sex_numeric&#39;</span><span class="p">,</span> <span class="s1">&#39;Age_clean&#39;</span><span class="p">,</span> <span class="s1">&#39;SibSp&#39;</span><span class="p">,</span> <span class="s1">&#39;Parch&#39;</span><span class="p">,</span> <span class="s1">&#39;Fare_clean&#39;</span><span class="p">,</span> <span class="s1">&#39;Cabin_numeric&#39;</span><span class="p">,</span> <span class="s1">&#39;Embarked_clean_numeric&#39;</span><span class="p">]</span>
