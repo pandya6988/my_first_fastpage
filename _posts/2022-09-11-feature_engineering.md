@@ -3071,7 +3071,7 @@ Outliers for Age_clean
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>{% include note.html content='We will use random forest model to predict target feature. ' %}</p>
+<p>{% include note.html content='We will use random forest model to predict target feature.  ' %}</p>
 
 </div>
 </div>
