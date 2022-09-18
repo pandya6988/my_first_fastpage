@@ -172,6 +172,7 @@ window.onload = wrap_img;
 <ul>
 <li class="toc-entry toc-h3"><a href="#train-test-split">train-test split </a></li>
 <li class="toc-entry toc-h3"><a href="#standardieze-features-(z-score)">standardieze features (z-score) </a></li>
+<li class="toc-entry toc-h3"><a href="#Three-set-of-final-features">Three set of final features </a></li>
 </ul>
 </li>
 </ul><!--
@@ -3879,6 +3880,38 @@ X_test 	: 20.0% of original dataset.
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Three-set-of-final-features">
+<a class="anchor" href="#Three-set-of-final-features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Three set of final features<a class="anchor-link" href="#Three-set-of-final-features"> </a>
+</h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">raw_features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Pclass'</span><span class="p">,</span> <span class="s1">'Sex'</span><span class="p">,</span> <span class="s1">'Age'</span><span class="p">,</span> <span class="s1">'SibSp'</span><span class="p">,</span> <span class="s1">'Parch'</span><span class="p">,</span> <span class="s1">'Fare'</span><span class="p">,</span> <span class="s1">'Cabin'</span><span class="p">,</span> <span class="s1">'Embarked'</span><span class="p">]</span>
+
+<span class="n">cleaned_original_features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Pclass'</span><span class="p">,</span> <span class="s1">'Sex'</span><span class="p">,</span> <span class="s1">'Age_clean'</span><span class="p">,</span> <span class="s1">'SibSp'</span><span class="p">,</span> <span class="s1">'Parch'</span><span class="p">,</span> <span class="s1">'Fare_clean'</span><span class="p">,</span> <span class="s1">'Cabin'</span><span class="p">,</span> <span class="s1">'Embarked_clean'</span><span class="p">]</span>
+
+<span class="n">all_features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Pclass'</span><span class="p">,</span> <span class="s1">'Sex'</span><span class="p">,</span> <span class="s1">'Age_clean'</span><span class="p">,</span> <span class="s1">'SibSp'</span><span class="p">,</span> <span class="s1">'Parch'</span><span class="p">,</span> <span class="s1">'family_members'</span><span class="p">,</span> <span class="s1">'Fare_clean'</span><span class="p">,</span> <span class="s1">'Fare_clean_tr'</span><span class="p">,</span> <span class="s1">'Cabin'</span><span class="p">,</span> <span class="s1">'Cabin_info'</span><span class="p">,</span> <span class="s1">'Embarked_clean'</span><span class="p">,</span> <span class="s1">'Title'</span><span class="p">]</span>
+
+<span class="n">reduced_features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Pclass'</span><span class="p">,</span> <span class="s1">'Sex'</span><span class="p">,</span> <span class="s1">'Age_clean'</span><span class="p">,</span> <span class="s1">'family_members'</span><span class="p">,</span> <span class="s1">'Fare_clean_tr'</span><span class="p">,</span> <span class="s1">'Cabin_info'</span><span class="p">,</span> <span class="s1">'Ttile_clean'</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
 &lt;/div&gt;
  
 
