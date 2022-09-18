@@ -3600,7 +3600,7 @@ X_test 	: 20.0% of original dataset.
 <li>Original features (<code>raw_features</code>)</li>
 <li>Original features with minimum cleaning like feeling missing values (<code>cleaned_original_features</code>)</li>
 <li>Original features with all created features (<code>all_features</code>)</li>
-<li>The most useful features by reducing redundency  (``)</li>
+<li>The most useful features by reducing redundency  (<code>reduced_features</code>)</li>
 </ul>
 
 </div>
