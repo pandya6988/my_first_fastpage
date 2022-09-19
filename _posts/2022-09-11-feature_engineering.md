@@ -4791,7 +4791,7 @@ X_test 	: 20.0% of original dataset.
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Model-comparison">Model comparison<a class="anchor-link" href="#Model-comparison"> </a></h4>
+<h3 id="Model-comparison">Model comparison<a class="anchor-link" href="#Model-comparison"> </a></h3>
 </div>
 </div>
 </div>
